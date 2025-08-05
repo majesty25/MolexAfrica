@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useParams, Link } from "wouter";
 import { ArrowLeft, Users, Target, Calendar, CheckCircle, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEOHead } from "@/components/ui/seo-head";
 import { ProgramHero } from "@/components/programs/ProgramHero";
