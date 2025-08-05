@@ -5,6 +5,7 @@ import { Heart, ArrowRight, Stethoscope, Users, Activity } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/ui/seo-head";
+import { ProgramGallery } from "@/components/programs/ProgramGallery";
 import { programs } from "@/lib/data";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -129,6 +130,11 @@ export default function HealthcarePrograms() {
           </div>
         </div>
       </section>
+
+      {/* Program Galleries */}
+      {healthcarePrograms.map((program) => (
+        <ProgramGallery key={program.id} program={program} />
+      ))}
     </>
   );
 }

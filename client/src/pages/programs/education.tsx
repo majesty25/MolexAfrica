@@ -5,6 +5,7 @@ import { GraduationCap, ArrowRight, BookOpen, Users, Target } from "lucide-react
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/ui/seo-head";
+import { ProgramGallery } from "@/components/programs/ProgramGallery";
 import { programs } from "@/lib/data";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
@@ -129,6 +130,11 @@ export default function EducationPrograms() {
           </div>
         </div>
       </section>
+
+      {/* Program Galleries */}
+      {educationPrograms.map((program) => (
+        <ProgramGallery key={program.id} program={program} />
+      ))}
     </>
   );
 }
