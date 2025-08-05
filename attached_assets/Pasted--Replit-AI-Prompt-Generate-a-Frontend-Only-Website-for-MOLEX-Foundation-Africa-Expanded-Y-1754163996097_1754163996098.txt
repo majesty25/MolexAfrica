@@ -1,0 +1,88 @@
+**Replit AI Prompt: Generate a Frontend-Only Website for “MOLEX Foundation Africa” (Expanded)**
+
+> You are an expert frontend developer tasked with building a **complete, production-ready, responsive** React website for MOLEX Foundation Africa. Only generate the **frontend** code—no backend or database logic.
+
+---
+
+### Framework & Tooling
+- **React** (create-react-app or Vite)  
+- **Tailwind CSS** for styling  
+- **React Router** for client-side navigation  
+- **README.md** with install/build/run instructions
+
+---
+
+### Pages & Routes
+
+1. **`/` Home**  
+   - Hero banner (logo, tagline, CTA)  
+   - “About” teaser  
+   - Core programs cards  
+   - Upcoming events slider  
+
+2. **`/about` About Us**  
+   - Mission & vision  
+   - History/timeline component  
+   - Team bios  
+
+3. **`/programs` Programs**  
+   - All programs list with filter/tabs  
+
+4. **`/events` Events**  
+   - Calendar or card grid  
+   - Event detail route (`/events/:id`)  
+
+5. **`/executives` Executives**  
+   - Profiles of the executive team (photo, name, title, bio)  
+   - Grid or carousel layout  
+
+6. **`/board` Board of Directors**  
+   - Board member photos & roles  
+   - Bios in expandable cards  
+
+7. **`/gallery` Gallery**  
+   - Photo/video grid with lightbox view  
+
+8. **`/news` News & Articles**  
+   - List of latest news and articles (date, title, excerpt)  
+   - Detail view route (`/news/:id`)  
+
+9. **`/projects` Projects**  
+   - Showcase past & current projects (image, title, summary)  
+   - Detail route (`/projects/:id`)  
+
+10. **`/join-us` Join Us**  
+    - Volunteer/member sign-up form (name, email, interests)  
+    - Callout to get involved
+
+11. **`/contact` Contact**  
+    - Contact form (name, email, subject, message)  
+    - Google Maps embed  
+    - Social links
+
+---
+
+### Components & UX
+- **Header**: Logo, nav links, mobile hamburger  
+- **Footer**: Quick links, social icons, newsletter signup  
+- **Reusable UI**: Buttons, cards, modals, form inputs  
+- **Accessibility**: ARIA roles, focus states, alt text  
+- **SEO**: Meta tags per page (title, description)
+
+---
+
+### Responsive Design
+- Mobile-first  
+- Tailwind breakpoints: sm, md, lg, xl  
+- Tested on phone, tablet, desktop
+
+---
+
+### Extras (Optional)
+- Dark mode toggle  
+- Smooth scroll to anchors  
+- Light animation on scroll (CSS or small library)
+
+---
+
+⏩ **Task**: Generate the full React + Tailwind codebase—components, pages, routes, and assets—so it can be dropped into Replit and run out of the box.  
