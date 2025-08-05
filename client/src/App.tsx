@@ -31,12 +31,17 @@ import SuccessStories from "@/pages/success-stories.tsx";
 import Admin from "@/pages/admin.tsx";
 import NotFound from "@/pages/not-found.tsx";
 
+// New Program Category Pages (assuming these exist)
+import EducationPrograms from "@/pages/programs/education.tsx";
+import HealthcarePrograms from "@/pages/programs/healthcare.tsx";
+import DevelopmentPrograms from "@/pages/programs/development.tsx";
+
 function Router() {
   return (
     <Switch>
       {/* Admin route without main layout */}
       <Route path="/admin" component={Admin} />
-      
+
       {/* All other routes with main layout */}
       <Route>
         <Layout>
@@ -44,6 +49,9 @@ function Router() {
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/programs" component={Programs} />
+            <Route path="/programs/education" component={EducationPrograms} />
+            <Route path="/programs/healthcare" component={HealthcarePrograms} />
+            <Route path="/programs/development" component={DevelopmentPrograms} />
             <Route path="/programs/:id" component={ProgramDetail} />
             <Route path="/events" component={Events} />
             <Route path="/events/:id" component={EventDetail} />
