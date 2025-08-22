@@ -280,43 +280,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Our History Timeline */}
-      <section className="py-20 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              25+ years of growing impact across the African continent
-            </p>
-          </div>
-
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-primary/20 hidden lg:block"></div>
-
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                  <div className="flex-1 lg:px-8">
-                    <Card className="hover:shadow-lg transition-shadow duration-300">
-                      <CardContent className="p-6">
-                        <div className="text-primary font-bold text-xl mb-2">{milestone.year}</div>
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">{milestone.title}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">{milestone.description}</p>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  
-                  {/* Timeline dot */}
-                  <div className="hidden lg:block w-4 h-4 bg-primary rounded-full border-4 border-white dark:border-gray-800 shadow-lg"></div>
-                  
-                  <div className="flex-1 lg:px-8"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       {/* Approach Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-900">

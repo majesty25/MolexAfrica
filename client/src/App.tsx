@@ -32,9 +32,9 @@ import Admin from "@/pages/admin.tsx";
 import NotFound from "@/pages/not-found.tsx";
 
 // New Program Category Pages (assuming these exist)
-import EducationPrograms from "@/pages/programs/education.tsx";
-import HealthcarePrograms from "@/pages/programs/healthcare.tsx";
-import DevelopmentPrograms from "@/pages/programs/development.tsx";
+import EducationPrograms from "@/pages/programs/education";
+import HealthcarePrograms from "@/pages/programs/healthcare";
+import DevelopmentPrograms from "@/pages/programs/sheroes";
 
 function Router() {
   return (
@@ -49,10 +49,10 @@ function Router() {
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/programs" component={Programs} />
-            <Route path="/programs/education" component={EducationPrograms} />
+            <Route path="/programs/sheroes/lk" component={EducationPrograms} />
             <Route path="/programs/healthcare" component={HealthcarePrograms} />
-            <Route path="/programs/development" component={DevelopmentPrograms} />
-            <Route path="/programs/:id" component={ProgramDetail} />
+            <Route path="/programs/:id" component={DevelopmentPrograms} />
+            {/* <Route path="/programs/:id" component={ProgramDetail} /> */}
             <Route path="/events" component={Events} />
             <Route path="/events/:id" component={EventDetail} />
             <Route path="/executives" component={Executives} />

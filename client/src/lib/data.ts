@@ -111,6 +111,13 @@ export const programs: Program[] = [
       "Establish long-term partnerships with community stakeholders",
       "Measure and evaluate program effectiveness"
     ],
+    activities: [
+      "Community workshops and training sessions",
+      "Mentorship and coaching programs",
+      "Resource distribution and support",
+      "Capacity building initiatives",
+      "Impact assessment and evaluation"
+    ],
     category: 'education',
     image: 'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21.jpg?alt=media&token=5057f237-8a7c-42cd-96d9-e80e0058a5e8',
     icon: 'GraduationCap',
@@ -119,7 +126,6 @@ export const programs: Program[] = [
       'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
       'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
       'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1594736797933-d0d3e341b921?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
       'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
     ]
   },

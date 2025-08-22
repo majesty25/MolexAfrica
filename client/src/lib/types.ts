@@ -13,6 +13,7 @@ export interface Program {
   title: string;
   description: string;
   objectives: string[],
+  activities?: string[],
   category: 'education' | 'healthcare' | 'development';
   image: string;
   icon: string;
