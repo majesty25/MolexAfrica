@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Fade from 'embla-carousel-fade';
 import { ChevronLeft, ChevronRight, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'wouter';
@@ -49,7 +50,7 @@ interface HeroCarouselProps {
 
 export function HeroCarousel({ heroRef }: HeroCarouselProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Fade()]);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const scrollTo = useCallback((index: number) => emblaApi && emblaApi.scrollTo(index), [emblaApi]);
@@ -89,9 +90,9 @@ export function HeroCarousel({ heroRef }: HeroCarouselProps) {
       <div className="embla" ref={emblaRef}>
         <div className="embla__container flex">
           {heroSlides.map((slide) => (
-            <div key={slide.id} className="embla__slide flex-none w-full relative h-[70vh] sm:h-[85vh] flex items-center justify-center">
+            <div key={slide.id} className="embla__slide flex-none w-full relative h-[70vh] sm:h-[85vh] flex items-center justify-center overflow-hidden">
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-zoom-slow"
                 style={{
                   backgroundImage: `url('${slide.image}')`
                 }}
