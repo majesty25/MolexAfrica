@@ -14,7 +14,7 @@ export default function Gallery() {
     { value: "education", label: "Education" },
     { value: "healthcare", label: "Healthcare" },
     { value: "agriculture", label: "Agriculture" },
-    { value: "water", label: "Water & Sanitation" },
+    { value: "STEM for Girls", label: "STEM for Girls" },
     { value: "empowerment", label: "Women's Empowerment" },
     { value: "community", label: "Community" }
   ];
@@ -134,7 +134,7 @@ export default function Gallery() {
 
             <Card className="text-center p-6">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">200+</div>
+                <div className="text-4xl font-bold text-primary mb-2">20+</div>
                 <div className="text-gray-600 dark:text-gray-300">Communities</div>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                   Featured in our gallery
@@ -154,8 +154,8 @@ export default function Gallery() {
 
             <Card className="text-center p-6">
               <CardContent className="pt-6">
-                <div className="text-4xl font-bold text-primary mb-2">20+</div>
-                <div className="text-gray-600 dark:text-gray-300">Countries</div>
+                <div className="text-4xl font-bold text-primary mb-2">16</div>
+                <div className="text-gray-600 dark:text-gray-300">Regions</div>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
                   Across the African continent
                 </p>
@@ -166,7 +166,7 @@ export default function Gallery() {
       </section>
 
       {/* Photography Ethics */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      {/* <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -204,7 +204,7 @@ export default function Gallery() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Lightbox */}
       {selectedImage && (

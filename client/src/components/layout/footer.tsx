@@ -49,10 +49,15 @@ export function Footer() {
                 <Instagram className="h-5 w-5" />
               </Button>
               <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
+                <a href="https://www.linkedin.com/company/molex-foundation-africa" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
+                </a>
               </Button>
-              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white">
-                <Youtube className="h-5 w-5" />
+              
+              <Button variant="ghost" size="icon" className="text-gray-400 hover:text-white" asChild>
+                <a href="https://www.youtube.com/@molexfoundationafrica4635" target="_blank" rel="noopener noreferrer">
+                  <Youtube className="h-5 w-5" />
+                </a>
               </Button>
             </div>
           </div>
@@ -157,7 +162,7 @@ export function Footer() {
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © 2024 MOLEX Foundation Africa. All rights reserved.
+              © 2025 MOLEX Foundation Africa. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm text-gray-400">
               <a href="#" className="hover:text-white transition-colors duration-200">

@@ -13,7 +13,7 @@ import { ArrowLeft, Calendar, CheckCircle, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ProgramImpactBanner } from "@/components/programs/ProgramImpactBanner";
 import { useToast } from "@/hooks/use-toast";
-export default function DevelopmentPrograms() {
+export default function KiddieStem() {
   // const developmentPrograms = programs.filter(program => program.id === "sheroes");
   const heroRef = useScrollAnimation({ delay: 200 });
   const { id } = useParams();

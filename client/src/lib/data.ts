@@ -105,29 +105,37 @@ export const programs: Program[] = [
     title: 'SHEROES in STEM',
     description: 'Enpowering Girls Through Artificial Intelligence and robotics',
     objectives: [
-      "Provide comprehensive training and development opportunities",
-      "Create sustainable impact in target communities",
-      "Build local capacity and leadership skills",
-      "Establish long-term partnerships with community stakeholders",
-      "Measure and evaluate program effectiveness"
+      "Increase the representation of girls in STEM education and careers.",
+      "Provide a robust foundation in STEM subjects through a variety of engaging and interactive activities.",
+      "Address and reduce the gender disparity in STEM fields.",
+      "Foster diversity and gender equality within the ICT sector.Combat against Sexual and Gender Based Violence.",
+      // "Measure and evaluate program effectiveness"
     ],
     activities: [
-      "Community workshops and training sessions",
+      "Robotics and Artificial Intelligence workshops and training sessions",
       "Mentorship and coaching programs",
-      "Resource distribution and support",
+      // "Resource distribution and support",
       "Capacity building initiatives",
       "Impact assessment and evaluation"
     ],
-    category: 'education',
+    category: 'STEM for Girls',
     image: 'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21.jpg?alt=media&token=5057f237-8a7c-42cd-96d9-e80e0058a5e8',
     icon: 'GraduationCap',
     gallery: [
-      'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
-    ]
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2F2A1A1383.jpg?alt=media&token=3372509c-27d7-497d-b35e-aa64cc5d0c2c',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-16.jpg?alt=media&token=ee9a68c6-d4a4-4da1-81b7-a37d384a3828',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-19.jpg?alt=media&token=0e405835-f16f-4b4d-8af5-1880f6421963',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-20.jpg?alt=media&token=10d2d010-931d-439d-b25c-a4d122fd7ee9',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-34.jpg?alt=media&token=b763a65c-4a42-4f6c-aa59-8a7001e39b87',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-38.jpg?alt=media&token=d9ec383d-56cb-4c8f-a316-d2422e67a6e1',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-40.jpg?alt=media&token=fd3372f8-9d84-4993-afce-504e1bf0f52c',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-47.jpg?alt=media&token=b2673a14-c76e-4921-afd9-8a89134295d8',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-52.jpg?alt=media&token=ea2b5f18-4ca7-41fb-8257-e4db36aa0b5e',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-42-09.jpg?alt=media&token=f8394307-19db-4c56-b91d-b623bc28b962',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-42-20.jpg?alt=media&token=b569baf7-da1f-49b8-92f9-788193b81ff0',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-42-12.jpg?alt=media&token=6d159b76-3413-4f0c-b560-312fb716edd6'
+]
+
   },
   {
     id: 'kiddie-stem',
@@ -505,61 +513,28 @@ export const boardMembers: TeamMember[] = [
   }
 ];
 
-export const galleryItems: GalleryItem[] = [
-  {
-    id: '1',
-    image: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Children learning in classroom',
-    category: 'education'
-  },
-  {
-    id: '2',
-    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Healthcare service delivery',
-    category: 'healthcare'
-  },
-  {
-    id: '3',
-    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Sustainable agriculture training',
-    category: 'agriculture'
-  },
-  {
-    id: '4',
-    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Clean water access project',
-    category: 'water'
-  },
-  {
-    id: '5',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Women\'s empowerment program',
-    category: 'empowerment'
-  },
-  {
-    id: '6',
-    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Youth technology training',
-    category: 'education'
-  },
-  {
-    id: '7',
-    image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Community volunteer work',
-    category: 'community'
-  },
-  {
-    id: '8',
-    image: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-    thumbnail: 'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300',
-    alt: 'Children celebrating success',
-    category: 'community'
-  }
-];
+// Function to generate gallery items from program galleries
+export const generateGalleryItemsFromPrograms = (): GalleryItem[] => {
+  const galleryItems: GalleryItem[] = [];
+  let idCounter = 1;
+
+  programs.forEach((program) => {
+    if (program.gallery && program.gallery.length > 0) {
+      program.gallery.forEach((imageUrl, index) => {
+        galleryItems.push({
+          id: `${program.id}-${idCounter}`,
+          image: imageUrl,
+          thumbnail: imageUrl, // Using same URL for thumbnail, could be optimized later
+          alt: `${program.title} - Image ${index + 1}`,
+          category: program.category
+        });
+        idCounter++;
+      });
+    }
+  });
+
+  return galleryItems;
+};
+
+// Generate gallery items from programs
+export const galleryItems: GalleryItem[] = generateGalleryItemsFromPrograms();

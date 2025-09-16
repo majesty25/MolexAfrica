@@ -14,7 +14,7 @@ export interface Program {
   description: string;
   objectives: string[],
   activities?: string[],
-  category: 'education' | 'healthcare' | 'development';
+  category: 'education' | 'healthcare' | 'development' | 'environment' | 'STEM for Girls';
   image: string;
   icon: string;
   gallery?: string[];

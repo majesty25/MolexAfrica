@@ -15,10 +15,10 @@ export default function About() {
   ];
 
   const stats = [
-    { number: "500,000+", label: "Lives Impacted", icon: Users },
-    { number: "200+", label: "Communities Served", icon: Globe },
-    { number: "50+", label: "Active Programs", icon: Target },
-    { number: "25+", label: "Years of Service", icon: Award }
+    { number: "5000+", label: "Lives Impacted", icon: Users },
+    { number: "20+", label: "Communities Served", icon: Globe },
+    { number: "10+", label: "Active Programs", icon: Target },
+    { number: "4+", label: "Years of Service", icon: Award }
   ];
 
   // Scroll Animation Refs
@@ -283,7 +283,7 @@ export default function About() {
     
 
       {/* Approach Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-20 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -328,7 +328,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
