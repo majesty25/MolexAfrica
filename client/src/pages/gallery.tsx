@@ -3,28 +3,40 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lightbox } from "@/components/ui/lightbox";
 import { SEOHead } from "@/components/ui/seo-head";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 import { galleryItems } from "@/lib/data";
 
 export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<{ image: string; alt: string } | null>(null);
   const [activeFilter, setActiveFilter] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
 
   const filters = [
     { value: "all", label: "All Photos" },
-    { value: "education", label: "Education" },
-    { value: "healthcare", label: "Healthcare" },
-    { value: "agriculture", label: "Agriculture" },
-    { value: "STEM for Girls", label: "STEM for Girls" },
-    { value: "empowerment", label: "Women's Empowerment" },
-    { value: "community", label: "Community" }
+    { value: "sheroes", label: "SHEROES in STEM" },
+    { value: "kiddie-stem", label: "Kiddie STEM" },
+    { value: "ai-club", label: "Robotics & AI Clubs in SHS" },
+    { value: "pinnale-journey", label: "Pinnacle Journey" },
+    { value: "guiding-stars", label: "Guiding Stars" }
   ];
 
-  const filteredItems = activeFilter === "all" 
-    ? galleryItems 
+  const filteredItems = activeFilter === "all"
+    ? galleryItems
     : galleryItems.filter(item => item.category === activeFilter);
+
+  const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const displayedItems = filteredItems.slice(startIndex, endIndex);
 
   const handleImageClick = (image: string, alt: string) => {
     setSelectedImage({ image, alt });
+  };
+
+  const handleFilterChange = (filterValue: string) => {
+    setActiveFilter(filterValue);
+    setCurrentPage(1); // Reset to first page when filter changes
   };
 
   const closeLightbox = () => {
@@ -62,7 +74,7 @@ export default function Gallery() {
               <Button
                 key={filter.value}
                 variant={activeFilter === filter.value ? "default" : "outline"}
-                onClick={() => setActiveFilter(filter.value)}
+                onClick={() => handleFilterChange(filter.value)}
                 className="transition-all duration-300"
               >
                 {filter.label}
@@ -76,7 +88,7 @@ export default function Gallery() {
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {filteredItems.map((item) => (
+            {displayedItems.map((item) => (
               <div
                 key={item.id}
                 className="relative overflow-hidden rounded-lg cursor-pointer transform hover:scale-105 transition-all duration-300 group"
@@ -106,6 +118,38 @@ export default function Gallery() {
               <p className="text-gray-600 dark:text-gray-300 text-lg">
                 No images found for the selected category.
               </p>
+            </div>
+          )}
+
+          {totalPages > 1 && (
+            <div className="mt-8">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                      className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                    <PaginationItem key={page}>
+                      <PaginationLink
+                        onClick={() => setCurrentPage(page)}
+                        isActive={currentPage === page}
+                        className="cursor-pointer"
+                      >
+                        {page}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext
+                      onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                      className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
             </div>
           )}
         </div>

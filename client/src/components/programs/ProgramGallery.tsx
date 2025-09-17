@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Images, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 interface ProgramGalleryProps {
   program: {
@@ -13,13 +14,22 @@ interface ProgramGalleryProps {
 export function ProgramGallery({ program }: ProgramGalleryProps) {
   const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;
 
   if (!program.gallery || program.gallery.length === 0) {
     return null;
   }
 
+  const totalPages = Math.ceil(program.gallery.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const displayedImages = program.gallery.slice(startIndex, endIndex);
+
   const openGallery = (index: number) => {
-    setCurrentImageIndex(index);
+    // Adjust index for pagination
+    const globalIndex = startIndex + index;
+    setCurrentImageIndex(globalIndex);
     setIsGalleryOpen(true);
   };
 
@@ -40,22 +50,22 @@ export function ProgramGallery({ program }: ProgramGalleryProps) {
               <Images className="w-4 h-4 mr-2" />
               Program Gallery
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">See Our Work in Action</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-">See Our Work in Action</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Explore photos from our {program.title} program activities and see the impact we're making in communities.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {program.gallery.map((image, index) => (
+            {displayedImages.map((image, index) => (
               <div
-                key={index}
+                key={startIndex + index}
                 className="relative group cursor-pointer overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
                 onClick={() => openGallery(index)}
               >
                 <img
                   src={image}
-                  alt={`${program.title} activity ${index + 1}`}
+                  alt={`${program.title} activity ${startIndex + index + 1}`}
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
@@ -68,6 +78,38 @@ export function ProgramGallery({ program }: ProgramGalleryProps) {
               </div>
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <div className="mt-8">
+              <Pagination>
+                <PaginationContent>
+                  <PaginationItem>
+                    <PaginationPrevious
+                      onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                      className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                    <PaginationItem key={page}>
+                      <PaginationLink
+                        onClick={() => setCurrentPage(page)}
+                        isActive={currentPage === page}
+                        className="cursor-pointer"
+                      >
+                        {page}
+                      </PaginationLink>
+                    </PaginationItem>
+                  ))}
+                  <PaginationItem>
+                    <PaginationNext
+                      onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                      className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                    />
+                  </PaginationItem>
+                </PaginationContent>
+              </Pagination>
+            </div>
+          )}
         </div>
       </section>
 

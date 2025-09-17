@@ -140,25 +140,36 @@ export const programs: Program[] = [
   {
     id: 'kiddie-stem',
     title: 'Kiddie STEM',
-    description: 'Delivers hands-on STEM to children in rural and underserved areas',
-    category: 'education',
+    description: 'KIDDIE STEM, by Molex Foundation Africa, promotes hands-on STEM (Science, Technology, Engineering, and Mathematics) education for children in Ghana and Africa. Through interactive activities in Robotics, Programming, and Electronics, it inspires early interest in STEM, builds foundational skills, and fosters future innovators.',
+    category: 'STEM',
     objectives: [
-      "Provide comprehensive training and development opportunities",
-      "Create sustainable impact in target communities",
-      "Build local capacity and leadership skills",
-      "Establish long-term partnerships with community stakeholders",
-      "Measure and evaluate program effectiveness"
+      "Introduce Children to STEM at an Early Age",
+      "Instil a Lasting Interest in STEM Careers",
+      "Provide Resources and Support to Underserved Communities",
+      "Foster diversity and gender equality within the ICT sector",
+      "Combat against Sexual and Gender Based Violence"
     ],
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
+    activities: [
+      "Mentorship Sessions: Provides ongoing guidance and support to help children develop foundational skills in robotics and programming. Fosters a culture of mentorship to inspire young learners and provide role models in STEM.",
+      "Mobile Seminars in Rural Communities: Delivers hands-on STEM education directly to children in rural and underserved areas. Equips students with practical experience in robotics and programming through interactive workshops.",
+      "Weekend Seminars at the MOLEX Robotic Lab: Deepens students' understanding and skills in a resource-rich environment with access to advanced STEM equipment. Promotes collaborative learning and innovation through team-based projects.",
+      "Robotic and Programming Hackathon: Creates a platform for students to showcase their skills and creativity in robotics and programming. Encourages innovation, teamwork, and real-world problem-solving through a competitive yet supportive environment."
+    ],
+    image: 'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3780%20(1).jpg?alt=media&token=f049135c-1af3-4996-991d-f64cda6006f7',
     icon: 'Users',
     gallery: [
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600'
-    ]
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3780%20(1).jpg?alt=media&token=f049135c-1af3-4996-991d-f64cda6006f7',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A0603.jpg?alt=media&token=306d55fc-6edd-4383-aa62-59e599865bf3',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A0618.jpg?alt=media&token=d295bcf4-49b0-4fb4-be3f-dcaa7cfe9a80',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3762.jpg?alt=media&token=49eaa75d-3645-4a0b-bda9-7c73fa6315b6',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3763.jpg?alt=media&token=65193860-02a7-454a-aa1b-6a236150c842',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3768.jpg?alt=media&token=868d8369-9f30-4976-bb43-c4b445972802',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A3780.jpg?alt=media&token=d00b436d-b614-413b-a874-9f47f6f7bf26',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A9275.jpg?alt=media&token=5bef9ae0-0140-4116-8d4d-69b5190e77b8',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A9281.jpg?alt=media&token=3a33d486-0249-4bce-91a6-1d3d12487c9a',
+  'https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2FKIDDIE%20STEM%2F3M3A9292.jpg?alt=media&token=e697cd75-4940-499e-9455-f0b277c5766e'
+]
+
   },
   {
     id: 'ai-club',
@@ -184,16 +195,21 @@ export const programs: Program[] = [
     ]
   },
   {
-    id: 'pinnale-journey',
-    title: 'Pinnacle Journey',
-    description: 'Empowering individuals by sharing diverse life experiences and personal narratives',
-    category: 'education',
+    id: 'pinnacle-journey',
+    title: 'The Pinnacle Journey: Revealing Diverse Life Stories',
+    description: 'An innovative project developed by the MOLEX Foundation Africa, aimed at empowering individuals by sharing inspiring personal narratives and life experiences. This project focuses on celebrating the diversity of life stories, showcasing how different careers, aspirations, and challenges shape individuals.',
+    category: 'development',
     objectives: [
-      "Provide comprehensive training and development opportunities",
-      "Create sustainable impact in target communities",
-      "Build local capacity and leadership skills",
-      "Establish long-term partnerships with community stakeholders",
-      "Measure and evaluate program effectiveness"
+      "Empowerment: Inspire and empower individuals by sharing real-life success stories and providing mentorship to help them navigate their own journeys.",
+      "Enhancement of Skills: Provide valuable resources to improve both personal and professional skill sets through mentorship, life coaching, and practical learning experiences.",
+      "Networking: Create an environment that encourages networking, allowing participants to connect with others, share experiences, and develop meaningful relationships.",
+      "Self-Discovery: Help participants discover their passions, strengths, and areas for growth, leading to a deeper understanding of themselves.",
+      "Holistic Development: Foster the overall growth of individuals by addressing their personal, professional, and emotional needs through a comprehensive program."
+    ],
+    activities: [
+      "Content Production: The show will feature inspiring stories, mentorship sessions, and interactive life coaching segments, recorded in first week of every Saturday of the month. These episodes will be posted on the MOLEX Foundation Africa YouTube channel every in the last Wednesday of the month.",
+      "Ongoing Evaluation: Pre- and post-program assessments will measure participants' skill development and growth, with regular feedback from volunteers, participants, and the public. Career advancements will be tracked to gauge long-term success.",
+      "Community Building: Efforts will be made to create an engaged online community through comment sections, live interactions, and periodic feedback from participants and viewers."
     ],
     image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600',
     icon: 'HandHeart',
@@ -526,7 +542,7 @@ export const generateGalleryItemsFromPrograms = (): GalleryItem[] => {
           image: imageUrl,
           thumbnail: imageUrl, // Using same URL for thumbnail, could be optimized later
           alt: `${program.title} - Image ${index + 1}`,
-          category: program.category
+          category: program.id
         });
         idCounter++;
       });

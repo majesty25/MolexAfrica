@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useParams } from "wouter";
 import { Sprout, ArrowRight, Building, Users, Target } from "lucide-react";
@@ -13,12 +12,10 @@ import { ArrowLeft, Calendar, CheckCircle, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ProgramImpactBanner } from "@/components/programs/ProgramImpactBanner";
 import { useToast } from "@/hooks/use-toast";
-export default function KiddieStem() {
-  // const developmentPrograms = programs.filter(program => program.id === "sheroes");
+
+export default function KiddieStemPrograms() {
   const heroRef = useScrollAnimation({ delay: 200 });
-  const { id } = useParams();
-  console.log("Program ID:", id);
-  const program = programs.find(p => p.id === id);
+  const program = programs.find(p => p.id === "kiddie-stem");
 
 
   // const handleShare = () => {
@@ -35,9 +32,9 @@ export default function KiddieStem() {
   //       description: "Program link has been copied to your clipboard.",
   //     });
   //   }
-  // };  
+  // };
 
-const getCategoryColor = (category: string) => {
+  const getCategoryColor = (category: string) => {
     switch (category) {
       case 'education':
         return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
@@ -67,14 +64,14 @@ const getCategoryColor = (category: string) => {
   return (
     <>
       <SEOHead
-        title="Development Programs - MOLEX Foundation Africa"
-        description="Discover our community development initiatives focused on sustainable infrastructure, economic empowerment, and capacity building across Africa."
-        keywords="community development, infrastructure development, economic empowerment, sustainable development, capacity building"
+        title="Kiddie STEM Programs - MOLEX Foundation Africa"
+        description="Discover our STEM education initiatives focused on providing hands-on learning experiences for children in rural and underserved areas."
+        keywords="STEM education, children education, hands-on learning, rural education, underserved communities"
       />
 
 <section className="relative h-[60vh] overflow-hidden">
       <img
-        src='https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21_1.jpg?alt=media&token=75a6022c-fd87-4310-8363-49e6e4bcfce3'
+        src={program?.image}
         alt=''
         className="w-full h-full object-cover"
       />
@@ -90,24 +87,24 @@ const getCategoryColor = (category: string) => {
                     {program?.title}
                   </h1>
                   <h2 className="text-xl sm:text-2xl lg:text-2xl text-gray-200 mb-6 font-medium">
-                    {program?.description}
+                    Igniting curiosity and innovation in children through hands-on STEM learning experiences that build foundational skills for the future.
                   </h2>
                   {/* <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                     {slide.description}
                   </p> */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <Button 
-                      size="lg" 
+                    <Button
+                      size="lg"
                       className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       asChild
                     >
                       <Link href=''>
-                        
+
                       </Link>
                     </Button>
-                    <Button 
-                      variant="outline" 
-                      size="lg" 
+                    <Button
+                      variant="outline"
+                      size="lg"
                       className="border-2 border-white text-red-900 hover:bg-red-900 hover:text-white px-8 py-4 text-lg font-bold transition-all duration-300"
                       asChild
                     >
@@ -133,10 +130,10 @@ const getCategoryColor = (category: string) => {
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Program Overview</h2>
               <div className="prose prose-lg dark:prose-invert max-w-none">
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                  {program?.description} This comprehensive program is designed to create lasting impact through 
+                  {program?.description} This comprehensive program is designed to create lasting impact through
                   evidence-based interventions and community-driven solutions.
                 </p>
-                
+
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Program Objectives</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
                   {program?.objectives.map((objective, index) => (
@@ -157,15 +154,12 @@ const getCategoryColor = (category: string) => {
                   ))}
                 </ul>
 
-                {/* <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Program Impact</h3>
-                <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                  {program?.impact.map((impact, index) => (
-                    <li key={index} className="flex items-start">
-                      <Users className="h-5 w-5 text-emerald-500 mt-0.5 mr-3 flex-shrink-0" />
-                      {impact}
-                    </li>
-                  ))}
-                </ul> */}
+                {/* <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">Why Kiddie STEM?</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                  In Ghana, children, particularly in rural and underserved communities, often lack exposure to STEM subjects during their formative years. Traditional classroom methods rarely incorporate hands-on learning, which limits children's understanding of and interest in these vital fields. As a result, children grow up without an adequate foundation in STEM, leading to a shortage of skilled professionals in fields like engineering, technology, and applied sciences. Additionally, without early hands-on experiences, many children, especially girls, are unable to develop the critical thinking, problem-solving, and creativity needed for success in STEM careers.
+                </p> */}
+
+               
               </div>
             </div>
 
@@ -174,7 +168,7 @@ const getCategoryColor = (category: string) => {
               <Card className="sticky top-4 mb-6">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Program Details</h3>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <Target className="h-5 w-5 text-primary mt-1" />
@@ -188,7 +182,7 @@ const getCategoryColor = (category: string) => {
                       <Users className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">Target Beneficiaries</div>
-                        <div className="text-gray-600 dark:text-gray-300">Girls</div>
+                        <div className="text-gray-600 dark:text-gray-300">Children</div>
                       </div>
                     </div>
 
@@ -215,10 +209,9 @@ const getCategoryColor = (category: string) => {
           </div>
         </div>
       </section>
-     
 
       {/* Programs Grid */}
-      {/* <section className="py-16 bg-white dark:bg-gray-800">
+      <section className="py-16 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Development Initiatives</h2>
@@ -256,58 +249,58 @@ const getCategoryColor = (category: string) => {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Impact Statistics */}
-      <section className="py-16 bg-red-50 dark:bg-red-900/20">
+      <section className="py-16 bg-blue-50 dark:bg-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Development Impact</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">STEM Education Impact</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300">
-              Communities transformed through sustainable development initiatives
+              Inspiring the next generation of innovators and problem-solvers
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Building className="h-8 w-8 text-red-600 dark:text-red-400" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">100+</div>
-              <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">500+</div>
+              <div className="text-gray-600 dark:text-gray-300">Children Reached</div>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="h-8 w-8 text-red-600 dark:text-red-400" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">200+</div>
-              <div className="text-gray-600 dark:text-gray-300">Communities</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">25+</div>
+              <div className="text-gray-600 dark:text-gray-300">Schools Partnered</div>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="h-8 w-8 text-red-600 dark:text-red-400" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Target className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">5,000+</div>
-              <div className="text-gray-600 dark:text-gray-300">Jobs Created</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">100+</div>
+              <div className="text-gray-600 dark:text-gray-300">Workshops Conducted</div>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Sprout className="h-8 w-8 text-red-600 dark:text-red-400" />
+              <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Sprout className="h-8 w-8 text-blue-600 dark:text-blue-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">80%</div>
-              <div className="text-gray-600 dark:text-gray-300">Sustainability Rate</div>
+              <div className="text-3xl font-bold text-blue-600 mb-2">85%</div>
+              <div className="text-gray-600 dark:text-gray-300">Interest in STEM Increased</div>
             </div>
           </div>
         </div>
       </section>
 
-      
+
 
       {/* Program Gallery */}
       {program && <ProgramGallery key={program.id} program={program} />}
 
        {/* Hero Section */}
-      <section ref={heroRef} className="py-20 bg-gradient-to-r from-red-800 to-red-900 text-white">
+      <section ref={heroRef} className="py-20 bg-gradient-to-r from-blue-800 to-blue-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex justify-center mb-6">
@@ -315,17 +308,17 @@ const getCategoryColor = (category: string) => {
                 <Sprout className="h-8 w-8 text-white" />
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6">Development Programs</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6">STEM Education Programs</h1>
             <p className="text-xl max-w-3xl mx-auto mb-8">
-              Building sustainable communities through infrastructure development, economic empowerment, 
-              and capacity building initiatives that create lasting positive change.
+              Igniting curiosity and innovation in children through hands-on STEM learning experiences that build
+              foundational skills for the future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                 <Link href="/join-us">Get Involved</Link>
               </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
-                <Link href="/donate">Support Development</Link>
+              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-blue-600">
+                <Link href="/donate">Support STEM Education</Link>
               </Button>
             </div>
           </div>
