@@ -37,10 +37,11 @@ export function SHEROESSection() {
                   Join SHEROES Program <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto">
+              <a href='https://thechronicle.com.gh/girls-in-stem-complete-molex-foundation-program/' className="w-full sm:w-auto btn btn-outline btn-lg flex items-center justify-center" target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="mr-2 h-4 w-4" />
+                
                 Read Chronicle Article
-              </Button>
+              </a>
             </div>
           </div>
 

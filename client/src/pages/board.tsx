@@ -5,6 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, Dialog
 import { SEOHead } from "@/components/ui/seo-head";
 import { boardMembers } from "@/lib/data";
 import type { TeamMember } from "@/lib/types";
+import { Linkedin, Twitter } from "lucide-react";
 
 export default function Board() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
@@ -33,33 +34,25 @@ export default function Board() {
       </section>
 
       {/* Board Members */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-0 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Distinguished Leadership</h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Our board members bring diverse expertise in development, healthcare, education, 
-              business, and public policy to guide our strategic direction.
-            </p>
-          </div>
-
+         
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {boardMembers.map((member) => (
               <Card key={member.id} className="text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                <CardContent className="p-6">
+                <CardContent className="p-8">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-primary/20"
+                    className="w-40 h-45 rounded-full mx-auto mb-6 object-contain border-4 border-primary/20"
                   />
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>
-                  <p className="text-primary font-semibold mb-3">{member.title}</p>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed line-clamp-3 mb-4">
-                    {member.bio}
-                  </p>
+                  <h6 className="text-md font-bold text-gray-900 dark:text-white mb-2">{member.name}</h6>
+                  <p className="text-primary font-semibold mb-4 text-md">{member.title}</p>
+                  {/* <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed line-clamp-3">{member.bio}</p> */}
+                  
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="w-full">
+                      <Button variant="outline" className="w-full mb-4">
                         View Bio
                       </Button>
                     </DialogTrigger>
@@ -77,18 +70,28 @@ export default function Board() {
                           <img
                             src={member.image}
                             alt={member.name}
-                            className="w-32 h-32 rounded-full object-cover border-4 border-primary/20 mx-auto sm:mx-0"
+                            className="w-40 h-40 rounded-full object-contain border-4 border-primary/20 mx-auto sm:mx-0"
                           />
                           <div className="flex-1">
-                            <p className="text-primary font-semibold text-lg mb-3">{member.title}</p>
-                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{member.bio}</p>
-                            {member.linkedin && (
-                              <div className="mt-4">
-                                <Button variant="outline" size="sm" asChild>
-                                  <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
-                                    LinkedIn Profile
-                                  </a>
-                                </Button>
+                            <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{member.bio}</p>
+                            {(member.linkedin || member.twitter) && (
+                              <div className="flex gap-4">
+                                {member.linkedin && (
+                                  <Button variant="outline" size="sm" asChild>
+                                    <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                                      <Linkedin className="h-4 w-4 mr-2" />
+                                      LinkedIn
+                                    </a>
+                                  </Button>
+                                )}
+                                {member.twitter && (
+                                  <Button variant="outline" size="sm" asChild>
+                                    <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                                      <Twitter className="h-4 w-4 mr-2" />
+                                      Twitter
+                                    </a>
+                                  </Button>
+                                )}
                               </div>
                             )}
                           </div>
@@ -96,6 +99,25 @@ export default function Board() {
                       </div>
                     </DialogContent>
                   </Dialog>
+                  
+                  {/* {(member.linkedin || member.twitter) && (
+                    <div className="flex justify-center space-x-4">
+                      {member.linkedin && (
+                        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-600" asChild>
+                          <a href={member.linkedin} target="_blank" rel="noopener noreferrer">
+                            <Linkedin className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      )}
+                      {member.twitter && (
+                        <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-400" asChild>
+                          <a href={member.twitter} target="_blank" rel="noopener noreferrer">
+                            <Twitter className="h-5 w-5" />
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  )} */}
                 </CardContent>
               </Card>
             ))}

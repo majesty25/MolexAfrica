@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Images, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious, PaginationEllipsis } from "@/components/ui/pagination";
 
 interface ProgramGalleryProps {
   program: {
@@ -41,6 +41,32 @@ export function ProgramGallery({ program }: ProgramGalleryProps) {
     setCurrentImageIndex((prev) => (prev - 1 + program.gallery!.length) % program.gallery!.length);
   };
 
+  const getPageNumbers = () => {
+    const pages = [];
+    const maxVisiblePages = 5;
+
+    if (totalPages <= maxVisiblePages) {
+      // Show all pages if total is small
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // Show ellipsis pattern
+      if (currentPage <= 3) {
+        // Near the start
+        pages.push(1, 2, 3, 4, '...', totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        // Near the end
+        pages.push(1, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+      } else {
+        // In the middle
+        pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+      }
+    }
+
+    return pages;
+  };
+
   return (
     <>
       <section className="py-20 bg-white dark:bg-gray-800">
@@ -50,10 +76,15 @@ export function ProgramGallery({ program }: ProgramGalleryProps) {
               <Images className="w-4 h-4 mr-2" />
               Program Gallery
             </div>
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-">See Our Work in Action</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">See Our Work in Action</h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Explore photos from our {program.title} program activities and see the impact we're making in communities.
             </p>
+            {totalPages > 1 && (
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+                Showing {startIndex + 1}-{Math.min(endIndex, program.gallery!.length)} of {program.gallery!.length} images
+              </p>
+            )}
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -89,15 +120,19 @@ export function ProgramGallery({ program }: ProgramGalleryProps) {
                       className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
                     />
                   </PaginationItem>
-                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
-                    <PaginationItem key={page}>
-                      <PaginationLink
-                        onClick={() => setCurrentPage(page)}
-                        isActive={currentPage === page}
-                        className="cursor-pointer"
-                      >
-                        {page}
-                      </PaginationLink>
+                  {getPageNumbers().map((page, index) => (
+                    <PaginationItem key={index}>
+                      {page === '...' ? (
+                        <PaginationEllipsis />
+                      ) : (
+                        <PaginationLink
+                          onClick={() => setCurrentPage(page as number)}
+                          isActive={currentPage === page}
+                          className="cursor-pointer"
+                        >
+                          {page}
+                        </PaginationLink>
+                      )}
                     </PaginationItem>
                   ))}
                   <PaginationItem>

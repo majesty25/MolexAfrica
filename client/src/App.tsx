@@ -36,6 +36,7 @@ import EducationPrograms from "@/pages/programs/education";
 import HealthcarePrograms from "@/pages/programs/healthcare";
 import DevelopmentPrograms from "@/pages/programs/sheroes";
 import KiddieStemPrograms from "@/pages/programs/kiddie-stem";
+import RoboticsAIClubsSHS from "@/pages/programs/robotics-ai-clubs-shs";
 
 function Router() {
   return (
@@ -53,6 +54,7 @@ function Router() {
             <Route path="/programs/sheroes/lk" component={EducationPrograms} />
             <Route path="/programs/healthcare" component={HealthcarePrograms} />
             <Route path="/programs/kiddie-stem" component={KiddieStemPrograms} />
+            <Route path="/programs/robotics-ai-clubs-shs" component={RoboticsAIClubsSHS} />
             {/* <Route path="/programs/:id" component={DevelopmentPrograms} /> */}
             <Route path="/programs/:id" component={ProgramDetail} />
             <Route path="/events" component={Events} />

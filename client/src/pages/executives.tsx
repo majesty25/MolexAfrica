@@ -44,18 +44,18 @@ export default function Executives() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {executiveTeam.map((member) => (
               <Card key={member.id} className="text-center hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer">
                 <CardContent className="p-8">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-32 h-32 rounded-full mx-auto mb-6 object-cover border-4 border-primary/20"
+                    className="w-40 h-45 rounded-full mx-auto mb-6 object-contain border-4 border-primary/20"
                   />
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{member.name}</h3>
+                  <h6 className="text-lg font-bold text-gray-900 dark:text-white mb-2">{member.name}</h6>
                   <p className="text-primary font-semibold mb-4 text-lg">{member.title}</p>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed line-clamp-3">{member.bio}</p>
+                  {/* <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed line-clamp-3">{member.bio}</p> */}
                   
                   <Dialog>
                     <DialogTrigger asChild>
@@ -77,7 +77,7 @@ export default function Executives() {
                           <img
                             src={member.image}
                             alt={member.name}
-                            className="w-32 h-32 rounded-full object-cover border-4 border-primary/20 mx-auto sm:mx-0"
+                            className="w-40 h-40 rounded-full object-contain border-4 border-primary/20 mx-auto sm:mx-0"
                           />
                           <div className="flex-1">
                             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">{member.bio}</p>
@@ -107,7 +107,7 @@ export default function Executives() {
                     </DialogContent>
                   </Dialog>
                   
-                  {(member.linkedin || member.twitter) && (
+                  {/* {(member.linkedin || member.twitter) && (
                     <div className="flex justify-center space-x-4">
                       {member.linkedin && (
                         <Button variant="ghost" size="icon" className="text-gray-400 hover:text-blue-600" asChild>
@@ -124,7 +124,7 @@ export default function Executives() {
                         </Button>
                       )}
                     </div>
-                  )}
+                  )} */}
                 </CardContent>
               </Card>
             ))}
