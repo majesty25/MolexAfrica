@@ -13,12 +13,10 @@ import { ArrowLeft, Calendar, CheckCircle, Share2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { ProgramImpactBanner } from "@/components/programs/ProgramImpactBanner";
 import { useToast } from "@/hooks/use-toast";
-export default function DevelopmentPrograms() {
-  // const developmentPrograms = programs.filter(program => program.id === "sheroes");
-  const heroRef = useScrollAnimation({ delay: 200 });
-  const { id } = useParams();
-  console.log("Program ID:", id);
-  const program = programs.find(p => p.id === id);
+export default function SheroesInStem() {
+   // const developmentPrograms = programs.filter(program => program.id === "sheroes");
+   const heroRef = useScrollAnimation({ delay: 200 });
+   const program = programs.find(p => p.id === "sheroes");
 
 
   // const handleShare = () => {
@@ -89,14 +87,14 @@ const getCategoryColor = (category: string) => {
                   <h1 className="text-2xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                     {program?.title}
                   </h1>
-                  <h2 className="text-xl sm:text-2xl lg:text-2xl text-gray-200 mb-6 font-medium">
+                  {/* <h2 className="text-xl sm:text-2xl lg:text-2xl text-gray-200 mb-6 font-medium">
                     {program?.description}
-                  </h2>
+                  </h2> */}
                   {/* <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                     {slide.description}
                   </p> */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <Button 
+                    {/* <Button 
                       size="lg" 
                       className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       asChild
@@ -104,7 +102,7 @@ const getCategoryColor = (category: string) => {
                       <Link href=''>
                         
                       </Link>
-                    </Button>
+                    </Button> */}
                     <Button 
                       variant="outline" 
                       size="lg" 
@@ -206,6 +204,12 @@ const getCategoryColor = (category: string) => {
                       Share Program
                     </Button>
                     <Button className="w-full" asChild>
+                      <Link href="/sheroes-application">Apply Now</Link>
+                    </Button>
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link href="/sheroes-portal">Participant Portal</Link>
+                    </Button>
+                    <Button variant="outline" className="w-full" asChild>
                       <Link href="/join-us">Get Involved</Link>
                     </Button>
                   </div>
@@ -254,6 +258,106 @@ const getCategoryColor = (category: string) => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cohorts Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Cohorts</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Meet the generations of SHEROES who are breaking barriers and leading the way in STEM education.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Cohort 1 */}
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21_1.jpg?alt=media&token=75a6022c-fd87-4310-8363-49e6e4bcfce3"
+                alt="Cohort 1 - The Pioneers"
+                className="w-full h-48 object-cover"
+              />
+              <CardContent className="p-6">
+                <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200 mb-3">
+                  Cohort 1 - Pioneers
+                </Badge>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">The Trailblazers</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  Our first cohort of 25 girls who embarked on this transformative journey, setting the foundation for future generations of STEM leaders.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    <Users className="inline h-4 w-4 mr-1" />
+                    25 Participants
+                  </div>
+                  <Button asChild size="sm">
+                    <Link href="/programs/sheroes/cohort1">
+                      Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Cohort 2 */}
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21_1.jpg?alt=media&token=75a6022c-fd87-4310-8363-49e6e4bcfce3"
+                alt="Cohort 2 - The Innovators"
+                className="w-full h-48 object-cover"
+              />
+              <CardContent className="p-6">
+                <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mb-3">
+                  Cohort 2 - Innovators
+                </Badge>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">The Innovators</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  Building on the success of Cohort 1, these girls explore advanced robotics, AI applications, and innovative problem-solving.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    <Users className="inline h-4 w-4 mr-1" />
+                    30 Participants
+                  </div>
+                  <Button asChild size="sm">
+                    <Link href="/programs/sheroes/cohort2">
+                      Learn More <ArrowRight className="ml-1 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Cohort 3 - Future */}
+            <Card className="overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 opacity-50">
+              <div className="w-full h-48 bg-gradient-to-br from-green-100 to-teal-100 dark:from-green-900 dark:to-teal-900 flex items-center justify-center">
+                <div className="text-center">
+                  <Target className="h-12 w-12 text-green-600 dark:text-green-400 mx-auto mb-2" />
+                  <div className="text-green-600 dark:text-green-400 font-semibold">Future Cohort</div>
+                </div>
+              </div>
+              <CardContent className="p-6">
+                <Badge className="bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200 mb-3">
+                  Cohort 3 - Leaders
+                </Badge>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">The Leaders</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                  Future leaders who will mentor others, lead community projects, and drive systemic change in STEM education.
+                </p>
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                    <Calendar className="inline h-4 w-4 mr-1" />
+                    In Development
+                  </div>
+                  <Button variant="outline" size="sm" disabled>
+                    In Development
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

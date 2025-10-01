@@ -98,18 +98,18 @@ export default function KiddieStemPrograms() {
                       className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105"
                       asChild
                     >
-                      <Link href=''>
-
+                      <Link href="/kiddie-stem-application">
+                        Apply Now
                       </Link>
                     </Button>
                     <Button
                       variant="outline"
                       size="lg"
-                      className="border-2 border-white text-red-900 hover:bg-red-900 hover:text-white px-8 py-4 text-lg font-bold transition-all duration-300"
+                      className="border-2 border-white text-blue-900 hover:bg-blue-900 hover:text-white px-8 py-4 text-lg font-bold transition-all duration-300"
                       asChild
                     >
-                      <Link href="/about">
-                        Learn More
+                      <Link href="/kiddie-stem-portal">
+                        Parent Portal
                       </Link>
                     </Button>
                   </div>
