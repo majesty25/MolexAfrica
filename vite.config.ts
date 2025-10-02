@@ -9,7 +9,7 @@ export default defineConfig({
   // 2. Add the resolve object
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, ".client/src"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 })
