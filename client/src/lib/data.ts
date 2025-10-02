@@ -487,9 +487,9 @@ export const executiveTeam: TeamMember[] = [
     bio: `
     Stephen Nyankson is a dedicated IT professional with a Bachelor's Degree in Computer Science from the University of Cape Coast. He currently works at RevGen Technologies, a software development company, as a Software Engineer, and also serves as the STEM Projects Lead and Chief STEM Facilitator for MOLEX Foundation Africa.
 
-Before joining RevGen Technologies, Stephen worked at the University of Cape Coast as an IT Support Specialist, where he gained valuable experience in managing IT infrastructure and providing technical support within an academic environment.
+Stephen joined the Foundation in November 2023 and has since played a key role in driving impactful STEM initiatives. With a passion for technology and a strong commitment to giving back to society, he continues to merge his expertise in software engineering with youth empowerment programs.
 
-Stephen joined MOLEX Foundation Africa in November 2023 and has since played a key role in driving impactful STEM initiatives. With a passion for technology and a strong commitment to giving back to society, he continues to merge his expertise in software engineering with youth empowerment programs.
+Before joining RevGen Technologies, Stephen worked at the University of Cape Coast as an IT Support Specialist, where he provided critical technical solutions for staff and students, and at Copianto AI as a Backend Developer, where he contributed to building and scaling AI-driven applications.
 
 He is not only committed to advancing his career in Software Engineering but also to creating opportunities for others through innovative projects and community engagement. Guided by his vision of making the world more connected, Stephen is eager to contribute his skills to achieve organizational goals while continually improving himself.`,
     image:
@@ -688,13 +688,13 @@ Researcher in Neural Networks, Intelligence System, Deep Learning, Intelligence 
 
    {
     id: "5",
-    name: "MR. FRANK ABEKU ADAMS",
+    name: "Mr. Frank Abeku Adams",
     title: "Member",
     bio: `
 Entrepreneur  
  `,
     image:
-      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2Fcaptain.jpg?alt=media&token=88412fcb-1b7c-436c-8e7f-ce93923e63e1",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture1.png?alt=media&token=cd17d6e5-560b-4597-908e-7073bc971253",
     category: "board",
     linkedin: "https://linkedin.com/in/kwame-asante",
   },
@@ -702,60 +702,94 @@ Entrepreneur
 
    {
     id: "6",
-    name: "FLT LT PHYLLIS OTCHERE-DJAN",
-    title: "Chair",
+    name: "Flt. Lt. Phyllis Otchere-Djan",
+    title: "Member",
     bio: `
-    Captain Tabitha Simons-Dadzie's life journey is a testament to perseverance and dedication to healthcare. Born in Nyanfeku Ekroful, Ghana, she began her education locally before pursuing nursing at Cape Coast Nursing and Midwifery Training School, driven by her passion for quality healthcare.
-
-Tabitha's career flourished as she contributed significantly to healthcare institutions, including Cape Coast Teaching Hospital, Cape Coast Metropolitan Hospital, Adisadel, and Ewim Polyclinic, earning respect for her unwavering dedication and professionalism.
-
-She further specialized in Ears, Nose, and Throat (E.N.T) medicine at Komfo Anokye Teaching Hospital, enhancing her ability to provide specialized care. Her journey then took her to the Ghana Armed Forces, where she excelled as an E.N.T Specialist, achieving the rank of Captain and serving at the 37 Military Hospital in Accra.
-
-Beyond her medical career, Tabitha chairs the Molex Foundation Africa, advocating for the girl- child in STEM fields and gender equality. My commitment to the well-being of others, especially the girl-child has propelled me to give back to society. I am passionate about helping the girl- child to bridge gender disparity and ensuring that the girl-child is mentored and coached to be able to learn, decide, and thrive in STEM fields.
-    `,
+N/A    `,
     image:
-      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2Fcaptain.jpg?alt=media&token=88412fcb-1b7c-436c-8e7f-ce93923e63e1",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture2.png?alt=media&token=efcb12de-fda3-4527-83cb-f4ed91d6c0a8",
     category: "board",
     linkedin: "https://linkedin.com/in/kwame-asante",
   },
 
    {
     id: "7",
-    name: "MISS  APPIAH  NANA AMA",
-    title: "Chair",
+    name: "Miss Appiah Nana Ama",
+    title: "Member",
     bio: `
-    Captain Tabitha Simons-Dadzie's life journey is a testament to perseverance and dedication to healthcare. Born in Nyanfeku Ekroful, Ghana, she began her education locally before pursuing nursing at Cape Coast Nursing and Midwifery Training School, driven by her passion for quality healthcare.
-
-Tabitha's career flourished as she contributed significantly to healthcare institutions, including Cape Coast Teaching Hospital, Cape Coast Metropolitan Hospital, Adisadel, and Ewim Polyclinic, earning respect for her unwavering dedication and professionalism.
-
-She further specialized in Ears, Nose, and Throat (E.N.T) medicine at Komfo Anokye Teaching Hospital, enhancing her ability to provide specialized care. Her journey then took her to the Ghana Armed Forces, where she excelled as an E.N.T Specialist, achieving the rank of Captain and serving at the 37 Military Hospital in Accra.
-
-Beyond her medical career, Tabitha chairs the Molex Foundation Africa, advocating for the girl- child in STEM fields and gender equality. My commitment to the well-being of others, especially the girl-child has propelled me to give back to society. I am passionate about helping the girl- child to bridge gender disparity and ensuring that the girl-child is mentored and coached to be able to learn, decide, and thrive in STEM fields.
-    `,
+N/A    `,
     image:
-      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2Fcaptain.jpg?alt=media&token=88412fcb-1b7c-436c-8e7f-ce93923e63e1",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture4.png?alt=media&token=fb7c2547-7090-4c3c-b2dc-aefedad632e8",
     category: "board",
     linkedin: "https://linkedin.com/in/kwame-asante",
   },
 
    {
     id: "8",
-    name: "Capt. Tabitha Simons-Dadzie",
-    title: "Chair",
+    name: "Dr. Mrs. Joana Akorfa Amuzu",
+    title: "Member",
     bio: `
-    Captain Tabitha Simons-Dadzie's life journey is a testament to perseverance and dedication to healthcare. Born in Nyanfeku Ekroful, Ghana, she began her education locally before pursuing nursing at Cape Coast Nursing and Midwifery Training School, driven by her passion for quality healthcare.
-
-Tabitha's career flourished as she contributed significantly to healthcare institutions, including Cape Coast Teaching Hospital, Cape Coast Metropolitan Hospital, Adisadel, and Ewim Polyclinic, earning respect for her unwavering dedication and professionalism.
-
-She further specialized in Ears, Nose, and Throat (E.N.T) medicine at Komfo Anokye Teaching Hospital, enhancing her ability to provide specialized care. Her journey then took her to the Ghana Armed Forces, where she excelled as an E.N.T Specialist, achieving the rank of Captain and serving at the 37 Military Hospital in Accra.
-
-Beyond her medical career, Tabitha chairs the Molex Foundation Africa, advocating for the girl- child in STEM fields and gender equality. My commitment to the well-being of others, especially the girl-child has propelled me to give back to society. I am passionate about helping the girl- child to bridge gender disparity and ensuring that the girl-child is mentored and coached to be able to learn, decide, and thrive in STEM fields.
-    `,
+N/A    `,
     image:
-      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2Fcaptain.jpg?alt=media&token=88412fcb-1b7c-436c-8e7f-ce93923e63e1",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture5.png?alt=media&token=ca0e77e0-1486-4c7f-b454-18151b42455a",
     category: "board",
     linkedin: "https://linkedin.com/in/kwame-asante",
   },
+
+  {
+    id: "9",
+    name: "Mr. Raphealus Guido Coleman",
+    title: "Member",
+    bio: `
+N/A    `,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture6.png?alt=media&token=3de0cd81-1ce0-4427-85ee-534f7e54de7b",
+    category: "board",
+    linkedin: "https://linkedin.com/in/kwame-asante",
+  },
+
+  {
+    id: "10",
+    name: "Miss Mariam Abubekar",
+    title: "Member",
+    bio: `
+N/A    `,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2F2A1A1329.jpg?alt=media&token=9cbbbcfd-8a55-4aba-aad4-e8f74ecef098",
+    category: "board",
+    linkedin: "https://linkedin.com/in/kwame-asante",
+  },
+
+  {
+    id: "11",
+    name: "Theresa Nkrumah",
+    title: "Secretary",
+    bio: `
+N/A    `,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2FPicture8.png?alt=media&token=5adc7e8e-7c91-4a03-a6e4-df3a7c34c285",
+    category: "board",
+    linkedin: "https://linkedin.com/in/kwame-asante",
+  },
+
+//   {
+//     id: "12",
+//     name: "Capt. Tabitha Simons-Dadzie",
+//     title: "Chair",
+//     bio: `
+//     Captain Tabitha Simons-Dadzie's life journey is a testament to perseverance and dedication to healthcare. Born in Nyanfeku Ekroful, Ghana, she began her education locally before pursuing nursing at Cape Coast Nursing and Midwifery Training School, driven by her passion for quality healthcare.
+
+// Tabitha's career flourished as she contributed significantly to healthcare institutions, including Cape Coast Teaching Hospital, Cape Coast Metropolitan Hospital, Adisadel, and Ewim Polyclinic, earning respect for her unwavering dedication and professionalism.
+
+// She further specialized in Ears, Nose, and Throat (E.N.T) medicine at Komfo Anokye Teaching Hospital, enhancing her ability to provide specialized care. Her journey then took her to the Ghana Armed Forces, where she excelled as an E.N.T Specialist, achieving the rank of Captain and serving at the 37 Military Hospital in Accra.
+
+// Beyond her medical career, Tabitha chairs the Molex Foundation Africa, advocating for the girl- child in STEM fields and gender equality. My commitment to the well-being of others, especially the girl-child has propelled me to give back to society. I am passionate about helping the girl- child to bridge gender disparity and ensuring that the girl-child is mentored and coached to be able to learn, decide, and thrive in STEM fields.
+//     `,
+//     image:
+//       "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fboard%2Fcaptain.jpg?alt=media&token=88412fcb-1b7c-436c-8e7f-ce93923e63e1",
+//     category: "board",
+//     linkedin: "https://linkedin.com/in/kwame-asante",
+//   },
   
 ];
 

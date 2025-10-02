@@ -767,7 +767,41 @@ export default function KiddieStemApplication() {
 
           {/* Progress Steps */}
           <div className="mb-8">
-            <div className="flex items-center justify-between">
+            {/* Mobile: Vertical Layout */}
+            <div className="md:hidden space-y-4">
+              {steps.map((step, index) => (
+                <div key={step.id} className="flex items-center">
+                  <div className={`flex items-center justify-center w-10 h-10 rounded-full flex-shrink-0 ${
+                    currentStep >= step.id
+                      ? 'bg-primary text-white'
+                      : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400'
+                  }`}>
+                    {currentStep > step.id ? (
+                      <CheckCircle className="h-5 w-5" />
+                    ) : (
+                      <step.icon className="h-5 w-5" />
+                    )}
+                  </div>
+                  <span className={`ml-3 text-sm font-medium ${
+                    currentStep >= step.id
+                      ? 'text-primary'
+                      : 'text-gray-600 dark:text-gray-400'
+                  }`}>
+                    {step.title}
+                  </span>
+                  {index < steps.length - 1 && (
+                    <div className={`flex-1 h-0.5 ml-4 ${
+                      currentStep > step.id
+                        ? 'bg-primary'
+                        : 'bg-gray-200 dark:bg-gray-700'
+                    }`} />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Desktop: Horizontal Layout */}
+            <div className="hidden md:flex items-center justify-between">
               {steps.map((step, index) => (
                 <div key={step.id} className="flex items-center">
                   <div className={`flex items-center justify-center w-10 h-10 rounded-full ${
