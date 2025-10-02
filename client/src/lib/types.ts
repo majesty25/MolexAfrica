@@ -30,6 +30,8 @@ export interface NewsArticle {
   image: string;
   author: string;
   gallery?: string[];
+
+  link?: string;
 }
 
 export interface Project {

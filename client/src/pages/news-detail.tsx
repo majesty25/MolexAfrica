@@ -150,13 +150,10 @@ export default function NewsDetail() {
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                {article.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
+              <div
+                className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: article.content }}
+              />
             </div>
 
             {/* Sidebar with Related Articles */}

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Link } from "wouter";
 import { Calendar, User, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -6,27 +6,32 @@ import { Button } from "@/components/ui/button";
 import { SEOHead } from "@/components/ui/seo-head";
 import { newsArticles } from "@/lib/data";
 import { useScrollAnimation, useStaggeredAnimation } from "@/hooks/useScrollAnimation";
+import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from "@/components/ui/pagination";
 
 export default function News() {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const articlesPerPage = 6;
 
-  const categories = [
-    { value: "all", label: "All News" },
-    { value: "Education", label: "Education" },
-    { value: "Water & Sanitation", label: "Water & Sanitation" },
-    { value: "Women's Empowerment", label: "Women's Empowerment" },
-    { value: "Healthcare", label: "Healthcare" },
-    { value: "Youth Development", label: "Youth Development" },
-    { value: "Partnerships", label: "Partnerships" }
-  ];
+  // Dynamically generate categories from newsArticles
+  const categories = useMemo(() => {
+    const cats = new Set(newsArticles.map(article => article.category).filter(Boolean));
+    return [{ value: "all", label: "All News" }, ...Array.from(cats).map(cat => ({ value: cat, label: cat }))];
+  }, []);
 
-  const filteredArticles = selectedCategory === "all" 
-    ? newsArticles 
+  const filteredArticles = selectedCategory === "all"
+    ? newsArticles
     : newsArticles.filter(article => article.category === selectedCategory);
+
+  // Pagination logic
+  const indexOfLastArticle = currentPage * articlesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - articlesPerPage;
+  const currentArticles = filteredArticles.slice(indexOfFirstArticle, indexOfLastArticle);
+  const totalPages = Math.ceil(filteredArticles.length / articlesPerPage);
 
   // Scroll Animation Refs
   const heroRef = useScrollAnimation({ delay: 200 });
-  const newsGridRef = useStaggeredAnimation(filteredArticles.length, 150);
+  const newsGridRef = useStaggeredAnimation(currentArticles.length, 150);
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -55,6 +60,11 @@ export default function News() {
     });
   };
 
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <SEOHead
@@ -71,7 +81,7 @@ export default function News() {
               Latest News & Updates
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Stay informed about our latest achievements, upcoming projects, and impact stories 
+              Stay informed about our latest achievements, upcoming projects, and impact stories
               from communities across Africa where we're making a difference.
             </p>
           </div>
@@ -86,7 +96,10 @@ export default function News() {
               <Button
                 key={category.value}
                 variant={selectedCategory === category.value ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category.value)}
+                onClick={() => {
+                  setSelectedCategory(category.value);
+                  setCurrentPage(1);
+                }}
                 className="transition-all duration-300"
               >
                 {category.label}
@@ -97,7 +110,7 @@ export default function News() {
       </section>
 
       {/* Featured Article */}
-      {filteredArticles.length > 0 && (
+      {currentArticles.length > 0 && (
         <section className="py-12 bg-white dark:bg-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
@@ -105,33 +118,33 @@ export default function News() {
               <Card className="overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <img
-                    src={filteredArticles[0].image}
-                    alt={filteredArticles[0].title}
+                    src={currentArticles[0].image}
+                    alt={currentArticles[0].title}
                     className="w-full h-64 lg:h-full object-cover"
                   />
                   <CardContent className="p-8 flex flex-col justify-center">
                     <div className="flex items-center mb-4">
-                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(filteredArticles[0].category)}`}>
-                        {filteredArticles[0].category}
+                      <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(currentArticles[0].category)}`}>
+                        {currentArticles[0].category}
                       </span>
                       <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm ml-auto">
                         <Calendar className="h-4 w-4 mr-1" />
-                        {formatDate(filteredArticles[0].date)}
+                        {formatDate(currentArticles[0].date)}
                       </div>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                      {filteredArticles[0].title}
+                      {currentArticles[0].title}
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-6 line-clamp-3">
-                      {filteredArticles[0].excerpt}
+                      {currentArticles[0].excerpt}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-gray-500 dark:text-gray-400 text-sm">
                         <User className="h-4 w-4 mr-1" />
-                        {filteredArticles[0].author}
+                        {currentArticles[0].author}
                       </div>
                       <Button asChild>
-                        <Link href={`/news/${filteredArticles[0].id}`}>
+                        <Link href={`/news/${currentArticles[0].id}`}>
                           Read More <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>
@@ -147,11 +160,11 @@ export default function News() {
       {/* News Grid */}
       <section className="py-12 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {filteredArticles.length > 1 && (
+          {currentArticles.length > 1 && (
             <>
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Recent Articles</h2>
               <div ref={newsGridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredArticles.slice(1).map((article) => (
+                {currentArticles.slice(1).map((article) => (
                   <Card key={article.id} className="overflow-hidden hover:shadow-xl transition-all duration-300">
                     <img
                       src={article.image}
@@ -195,6 +208,37 @@ export default function News() {
               </p>
             </div>
           )}
+
+          {/* Pagination Controls */}
+          {totalPages > 1 && (
+            <Pagination>
+              <PaginationContent>
+                <PaginationItem>
+                  <PaginationPrevious
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    className={currentPage === 1 ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
+                </PaginationItem>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+                  <PaginationItem key={page}>
+                    <PaginationLink
+                      onClick={() => setCurrentPage(page)}
+                      isActive={currentPage === page}
+                      className="cursor-pointer"
+                    >
+                      {page}
+                    </PaginationLink>
+                  </PaginationItem>
+                ))}
+                <PaginationItem>
+                  <PaginationNext
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    className={currentPage === totalPages ? "pointer-events-none opacity-50" : "cursor-pointer"}
+                  />
+                </PaginationItem>
+              </PaginationContent>
+            </Pagination>
+          )}
         </div>
       </section>
 
@@ -203,7 +247,7 @@ export default function News() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Stay Informed</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter to receive the latest news, impact stories, and updates 
+            Subscribe to our newsletter to receive the latest news, impact stories, and updates
             about our work across African communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
