@@ -108,11 +108,11 @@ export default function NewsDetail() {
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 className="text-2xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
             {article.title}
           </h1>
           
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+          <p className="text-md text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             {article.excerpt}
           </p>
 
@@ -153,7 +153,7 @@ export default function NewsDetail() {
             {/* Main Content */}
             <div className="lg:col-span-2">
               <div
-                className="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed"
+                className="prose prose-md dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
             </div>

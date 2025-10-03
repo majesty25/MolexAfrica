@@ -4,6 +4,7 @@ import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { programs } from "@/lib/data";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -103,36 +104,13 @@ export function Footer() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Our Programs</h4>
             <ul className="space-y-2">
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Education
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Healthcare
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Water & Sanitation
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Women's Empowerment
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Youth Development
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs" className="text-gray-400 hover:text-white transition-colors duration-200">
-                  Agriculture
-                </Link>
-              </li>
+              {programs.map((program) => (
+                <li key={program.id}>
+                  <Link href={`/programs/${program.id}`} className="text-gray-400 hover:text-white transition-colors duration-200">
+                    {program.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

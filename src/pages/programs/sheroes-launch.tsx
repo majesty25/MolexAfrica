@@ -38,11 +38,31 @@ export default function SheroesLaunch() {
     ],
     sdgs: ["SDG 4", "SDG 5", "SDG 8", "SDG 10"],
     speakers: [
-      "Dr. Francis Nkrumah - Climate Science",
-      "Dr. Regina Esi Turkson - AI & Leadership",
-      "Prof. Nana Ama Browne Klutse - Climate Data Science & Policy",
-      "Mr. Solomon Appekey - Astronomy & Space Technology",
-      "Dr. Irene Kafui Vorsah Amponsah - Statistics & Data Analysis",
+      {
+        name: "Prof. Nana Ama Browne Klutse",
+        info: "Head of Physics Department - University of Ghana, Vice Chair PCC",
+        image: "https://via.placeholder.com/150?text=Prof.+Nana+Ama+Browne+Klutse",
+      },
+      {
+        name: "Sarah DeMartazzi",
+        info: "Program Manager, Women in STEM - The Henry Luce Foundation, New York",
+        image: "https://molexfoundation.org/images/speakers/Sarah_DeMartazzi_010924_098.jpg",
+      },
+      {
+        name: "Dr. Regina Esi Turkson",
+        info: "Senior Lecturer, Department of Computer Science and Information Technology - University of Cape Coast",
+        image: "https://via.placeholder.com/150?text=Dr.+Regina+Esi+Turkson",
+      },
+      {
+        name: "Adelaide Asantewa Asante",
+        info: "Head of West Africa Office for UK Ecology and Hydrology",
+        image: "https://via.placeholder.com/150?text=Adelaide+Asantewa+Asante",
+      },
+      {
+        name: "Dr. Irene Kafui Vorsah Amponsah",
+        info: "Lecturer, Department of Statistics - University of Cape Coast",
+        image: "https://via.placeholder.com/150?text=Dr.+Irene+Kafui+Vorsah+Amponsah",
+      },
     ],
     highlights: [
       "Inspirational talks from leading experts",
@@ -214,7 +234,7 @@ export default function SheroesLaunch() {
       </section>
 
       {/* Event Highlights */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-900">
+      {/* <section className="py-12 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold">Event Highlights</h2>
@@ -240,7 +260,7 @@ export default function SheroesLaunch() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Featured Speakers */}
       <section className="py-12 bg-white dark:bg-gray-800">
@@ -254,11 +274,15 @@ export default function SheroesLaunch() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {launch.speakers.map((speaker, index) => (
-              <Card key={speaker}>
+              <Card key={speaker.name}>
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <Award className="h-5 w-5 text-primary" />
-                    <h3 className="text-lg font-semibold">{speaker}</h3>
+                    <img
+                      src={speaker.image}
+                      alt={speaker.name}
+                      className="h-12 w-12 rounded-full object-cover"
+                    />
+                    <h3 className="text-lg font-semibold">{speaker.name}</h3>
                   </div>
                 </CardContent>
               </Card>
