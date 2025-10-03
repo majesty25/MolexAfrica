@@ -9,79 +9,7 @@ import { successStories } from "@/lib/data";
 
 // Extended success stories for the dedicated page
 const extendedSuccessStories = [
-  ...successStories,
-  {
-    id: '4',
-    name: 'Adwoa Asante',
-    age: 18,
-    location: 'Kumasi, Ghana',
-    story: 'Adwoa was passionate about technology but lacked access to proper resources and mentorship. Through our Digital Literacy and Innovation program, she gained coding skills and learned about emerging technologies. She participated in hackathons and tech workshops, eventually developing a mobile app to help farmers in her community access market information.',
-    program: 'Digital Literacy & Innovation',
-    achievement: 'Developed award-winning agricultural mobile app and received tech scholarship',
-    image: 'https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'Technology became my tool for solving real problems in my community. MOLEX Foundation opened doors I never knew existed.',
-    date: '2024-01-15'
-  },
-  {
-    id: '5',
-    name: 'Salamatu Mohammed',
-    age: 20,
-    location: 'Bolgatanga, Ghana',
-    story: 'Growing up in a rural community where early marriage was common, Salamatu faced pressure to drop out of school. Our Girls Education Advocacy program provided her with scholarship support, mentorship, and advocacy with her family. She continued her education and became a role model for other girls in her community.',
-    program: 'Girls Education Advocacy',
-    achievement: 'Completed secondary education and now studies at university while mentoring 20+ girls',
-    image: 'https://images.unsplash.com/photo-1494790108755-2616c5c5c7a8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'Education saved my life. Now I am determined to ensure no girl in my community faces the same barriers I did.',
-    date: '2024-02-20'
-  },
-  {
-    id: '6',
-    name: 'Maame Efua',
-    age: 22,
-    location: 'Ho, Ghana',
-    story: 'Maame Efua survived domestic violence and found herself homeless with two young children. Through our SGBV Prevention and Support program, she received emergency shelter, legal assistance, and skills training. She learned tailoring and business management, eventually starting her own fashion business that now employs five other women.',
-    program: 'SGBV Prevention & Support',
-    achievement: 'Built successful fashion business employing 5 women and became community advocate',
-    image: 'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'From survivor to entrepreneur to advocate - my journey shows that with the right support, we can transform pain into purpose.',
-    date: '2024-03-10'
-  },
-  {
-    id: '7',
-    name: 'Yaa Pokua',
-    age: 15,
-    location: 'Sunyani, Ghana',
-    story: 'Yaa was struggling with chemistry and physics, feeling discouraged about pursuing science. Through the SHEROES in STEM program, she found passionate mentors and hands-on laboratory experiences that rekindled her love for science. She now leads her school science club and dreams of becoming a biomedical engineer.',
-    program: 'SHEROES in STEM',
-    achievement: 'Became science club president and won regional chemistry competition',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'Science is not just for boys. Through SHEROES in STEM, I learned that girls can lead in laboratories and innovation.',
-    date: '2024-04-05'
-  },
-  {
-    id: '8',
-    name: 'Adjoa Mensah',
-    age: 19,
-    location: 'Takoradi, Ghana',
-    story: 'Coming from a fishing community affected by climate change, Adjoa witnessed firsthand how rising sea levels impacted her family livelihood. Through our Climate Resilience program, she learned about sustainable practices and renewable energy. She now leads environmental initiatives in her community and studies environmental science.',
-    program: 'Climate Resilience',
-    achievement: 'Established community solar project and received environmental leadership award',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'Climate change threatened our future, but through education and action, we are building a more sustainable tomorrow.',
-    date: '2024-05-12'
-  },
-  {
-    id: '9',
-    name: 'Akua Boateng',
-    age: 17,
-    location: 'Tarkwa, Ghana',
-    story: 'Akua lost both parents to preventable diseases due to lack of access to healthcare information. Through our Health Education and Advocacy program, she learned about health promotion and disease prevention. She now volunteers as a community health educator and plans to study medicine to serve rural communities.',
-    program: 'Health Education & Advocacy',
-    achievement: 'Trained 200+ community members in health practices and received medical scholarship',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400',
-    quote: 'Every person deserves access to health information and care. I will dedicate my life to making this a reality.',
-    date: '2024-06-18'
-  }
+  ...successStories
 ];
 
 export default function SuccessStories() {
@@ -162,7 +90,7 @@ export default function SuccessStories() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredStories.map((story) => (
               <Card key={story.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                <div className="relative">
+                {/* <div className="relative">
                   <img
                     src={story.image}
                     alt={story.name}
@@ -173,7 +101,7 @@ export default function SuccessStories() {
                       {story.program}
                     </Badge>
                   </div>
-                </div>
+                </div> */}
                 
                 <CardContent className="p-6">
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-3">

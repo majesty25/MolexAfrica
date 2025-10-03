@@ -83,50 +83,54 @@ export const heroSlides: HeroSlide[] = [
 export const successStories: SuccessStory[] = [
   {
     id: "1",
-    name: "Akosua Mensah",
-    age: 17,
-    location: "Nyanfeku Ekroful, Ghana",
+    name: "Jessica Korkor Hammond",
+    // Age not provided in report
+    age: undefined as unknown as number,
+    location: "Edinaman Senior High School, Ghana",
     story:
-      "Akosua was struggling with mathematics when she joined our SHEROES in STEM program. Through dedicated mentorship and hands-on learning experiences, she discovered her passion for engineering.",
+      "Jessica entered SHEROES thinking robotics was only for boys. Through hands-on Arduino and coding, she learned to apply robotics toward SDG problems and left determined to give back.",
     program: "SHEROES in STEM",
     achievement:
-      "Won Regional Science Fair and secured scholarship to study Engineering",
+      "Learned Arduino & coding; applied robotics to SDGs; committed to mentor peers",
     image:
-      "https://images.unsplash.com/photo-1594736797933-d0d3e341b921?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+      "https://images.unsplash.com/photo-1599738370212-a44fd3fb3fb1?auto=format&fit=crop&w=400&h=400",
     quote:
-      "MOLEX Foundation showed me that being a girl in STEM is not a limitation, but a superpower. I now mentor other girls in my community.",
+      "I learned that girls can also do robotics and AI.",
   },
   {
     id: "2",
-    name: "Fatima Ibrahim",
-    age: 16,
-    location: "Tamale, Ghana",
+    name: "Blessing Ofosu Acheampong",
+    // Age not provided in report
+    age: undefined as unknown as number,
+    location: "Abakrampa Senior High School, Ghana",
     story:
-      "Coming from a family where girls were not encouraged to pursue higher education, Fatima joined our Girls Education Advocacy program. She learned about her rights and gained confidence to pursue her dreams.",
-    program: "Girls Education Advocacy",
+      "Blessing came hoping to build a walking robot. She learned robot parts, circuits, and coding, interacted with experts across fields, and discovered Physics isn’t difficult with the right teaching.",
+    program: "SHEROES in STEM",
     achievement:
-      "First in her family to complete secondary school and pursuing computer science",
+      "Built basic circuits and programmed sensors; gained confidence in Physics and coding",
     image:
-      "https://images.unsplash.com/photo-1546019865-9d4f4e4e66a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+      "https://images.unsplash.com/photo-1542541864-4abf21a55761?auto=format&fit=crop&w=400&h=400",
     quote:
-      "Education is the key that unlocked my potential. Now I am determined to help other girls in my community break the cycle of limitation.",
+      "Physics is not difficult because of how I have been taught in this bootcamp.",
   },
   {
     id: "3",
-    name: "Ama Osei",
-    age: 19,
-    location: "Cape Coast, Ghana",
+    name: "Alexandra Didieye",
+    // Age not provided in report
+    age: undefined as unknown as number,
+    location: "Wesley Girls’ High School, Ghana",
     story:
-      "After experiencing gender-based violence, Ama found refuge and healing through our SGBV Prevention and Support program. She received counseling, legal support, and skills training.",
-    program: "SGBV Prevention & Support",
+      "Originally focused on software, Alexandra’s two-week intensive experience ignited a passion for hardware and electronics—mastering Arduino components, circuit design, and programming.",
+    program: "SHEROES in STEM",
     achievement:
-      "Started her own tailoring business and became a community advocate",
+      "Shifted focus to hardware/electronics; designed and programmed Arduino circuits",
     image:
-      "https://images.unsplash.com/photo-1580618672591-eb180b1a973f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=400",
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=400&h=400",
     quote:
-      "MOLEX Foundation helped me transform my pain into purpose. I now use my story to help other survivors heal and thrive.",
+      "The bootcamp ignited a passion for hardware and electronics.",
   },
 ];
+
 
 export const programs: Program[] = [
   {

@@ -66,11 +66,11 @@ export function SuccessStoriesNotification() {
         
         {/* Story content */}
         <div className="flex items-start space-x-3">
-          <img
+          {/* <img
             src={currentStory.image}
             alt={currentStory.name}
             className="w-10 h-10 rounded-full object-cover flex-shrink-0"
-          />
+          /> */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center mb-1">
               <h5 className="text-sm font-medium text-gray-900 dark:text-white truncate">
