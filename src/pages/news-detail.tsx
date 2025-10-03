@@ -83,6 +83,8 @@ export default function NewsDetail() {
         title={`${article.title} - MOLEX Foundation Africa`}
         description={article.excerpt}
         keywords={`${article.category}, foundation news, african development, ${article.title}`}
+        image={article.image}
+        url={window.location.href}
       />
 
       {/* Navigation */}
