@@ -42,6 +42,7 @@ import NotFound from "@/pages/not-found.tsx";
 import EducationPrograms from "@/pages/programs/education";
 import HealthcarePrograms from "@/pages/programs/healthcare";
 import SheroesInStem from "@/pages/programs/sheroes";
+import SheroesLaunch from "@/pages/programs/sheroes-launch";
 import SheroesCohort1 from "@/pages/programs/sheroes-cohort1";
 import SheroesCohort2 from "@/pages/programs/sheroes-cohort2";
 import KiddieStemPrograms from "@/pages/programs/kiddie-stem";
@@ -60,6 +61,7 @@ function Router() {
             <Route path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/programs" component={Programs} />
+            <Route path="/programs/sheroes/launch" component={SheroesLaunch} />
             <Route path="/programs/sheroes/cohort1" component={SheroesCohort1} />
             <Route path="/programs/sheroes/cohort2" component={SheroesCohort2} />
             <Route path="/programs/sheroes/ff" component={EducationPrograms} />

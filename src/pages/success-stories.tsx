@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/ui/seo-head";
 import { successStories } from "@/lib/data";
+import { SuccessStory } from "@/lib/types";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
 
 // Extended success stories for the dedicated page
 const extendedSuccessStories = [
@@ -14,12 +16,21 @@ const extendedSuccessStories = [
 
 export default function SuccessStories() {
   const [selectedProgram, setSelectedProgram] = useState<string>('all');
+  const [selectedStory, setSelectedStory] = useState<SuccessStory | null>(null);
 
   const programs = Array.from(new Set(extendedSuccessStories.map(story => story.program)));
-  
-  const filteredStories = selectedProgram === 'all' 
-    ? extendedSuccessStories 
+
+  const filteredStories = selectedProgram === 'all'
+    ? extendedSuccessStories
     : extendedSuccessStories.filter(story => story.program === selectedProgram);
+
+  const openModal = (story: SuccessStory) => {
+    setSelectedStory(story);
+  };
+
+  const closeModal = () => {
+    setSelectedStory(null);
+  };
 
   return (
     <div className="min-h-screen">
@@ -90,20 +101,7 @@ export default function SuccessStories() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredStories.map((story) => (
               <Card key={story.id} className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-                {/* <div className="relative">
-                  <img
-                    src={story.image}
-                    alt={story.name}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <Badge className="bg-primary/90 text-white">
-                      {story.program}
-                    </Badge>
-                  </div>
-                </div> */}
-                
-                <CardContent className="p-6">
+                <CardContent className="p-6 cursor-pointer" onClick={() => openModal(story)}>
                   <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-3">
                     <MapPin className="h-4 w-4" />
                     <span>{story.location}</span>
@@ -149,6 +147,39 @@ export default function SuccessStories() {
           </div>
         </div>
       </section>
+
+      {/* Modal for full story */}
+      <Dialog open={!!selectedStory} onOpenChange={closeModal}>
+        <DialogContent className="max-w-3xl">
+          <DialogHeader>
+            <DialogTitle>{selectedStory?.name}</DialogTitle>
+            <DialogDescription>
+              <div className="mb-4">
+                <strong>Location:</strong> {selectedStory?.location} | <strong>Age:</strong> {selectedStory?.age}
+              </div>
+              <p className="mb-4">{selectedStory?.story}</p>
+              <div className="bg-primary/5 dark:bg-primary/10 p-3 rounded-lg mb-4">
+                <div className="text-xs font-medium text-primary mb-1">Achievement</div>
+                <div className="text-sm font-medium text-gray-900 dark:text-white">
+                  {selectedStory?.achievement}
+                </div>
+              </div>
+              <blockquote className="border-l-3 border-primary pl-3 text-sm italic text-gray-600 dark:text-gray-300 mb-4">
+                "{selectedStory?.quote}"
+              </blockquote>
+              {selectedStory?.date && (
+                <div className="flex items-center gap-1 text-xs text-gray-500">
+                  <Calendar className="h-3 w-3" />
+                  <span>{new Date(selectedStory.date).toLocaleDateString()}</span>
+                </div>
+              )}
+            </DialogDescription>
+            <DialogClose asChild>
+              <Button variant="outline" className="mt-4">Close</Button>
+            </DialogClose>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
 
       {/* Call to Action */}
       <section className="py-20 bg-gradient-to-br from-primary/5 to-primary/10">

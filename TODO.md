@@ -1,0 +1,3 @@
+- [x] Create src/pages/programs/sheroes-launch.tsx with launch event details
+- [x] Update src/pages/programs/sheroes.tsx to include link to launch page
+- [ ] Verify the page renders correctly
