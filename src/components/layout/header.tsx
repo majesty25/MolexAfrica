@@ -53,7 +53,7 @@ export function Header() {
 
   const mediaItems = [
     { name: "Gallery", href: "/gallery", description: "View photos and videos from our programs and events" },
-    { name: "News", href: "/news", description: "Read the latest updates and stories from our foundation" },
+    { name: "News & Articles", href: "/news", description: "Read the latest updates and stories from our foundation" },
     { name: "Success Stories", href: "/success-stories", description: "Read inspiring stories of transformation and empowerment" }
   ];
 

@@ -382,22 +382,22 @@ const getCategoryColor = (category: string) => {
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Building className="h-8 w-8 text-red-600 dark:text-red-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">100+</div>
-              <div className="text-gray-600 dark:text-gray-300">Projects Completed</div>
+              <div className="text-3xl font-bold text-red-600 mb-2">2+</div>
+              <div className="text-gray-600 dark:text-gray-300">Cohorts Completed</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8 text-red-600 dark:text-red-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">200+</div>
-              <div className="text-gray-600 dark:text-gray-300">Communities</div>
+              <div className="text-3xl font-bold text-red-600 mb-2">40+</div>
+              <div className="text-gray-600 dark:text-gray-300">Senior High Schools</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Target className="h-8 w-8 text-red-600 dark:text-red-400" />
               </div>
-              <div className="text-3xl font-bold text-red-600 mb-2">5,000+</div>
-              <div className="text-gray-600 dark:text-gray-300">Jobs Created</div>
+              <div className="text-3xl font-bold text-red-600 mb-2">120</div>
+              <div className="text-gray-600 dark:text-gray-300">Girls Trained</div>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mx-auto mb-4">
