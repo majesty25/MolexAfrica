@@ -31,9 +31,9 @@ export function Header() {
     { name: "Home", href: "/" },
     { name: "About", href: "/about", hasDropdown: true, dropdownType: "about" },
     { name: "Programs", href: "/programs", hasDropdown: true, dropdownType: "programs" },
-    { name: "Events", href: "/events" },
+    // { name: "Events", href: "/events" },
     { name: "Media", href: "/gallery", hasDropdown: true, dropdownType: "media" },
-    { name: "Join Us", href: "/join-us", hasDropdown: true, dropdownType: "joinus" },
+    // { name: "Join Us", href: "/join-us", hasDropdown: true, dropdownType: "joinus" },
     { name: "Contact", href: "/contact" },
   ];
 

@@ -90,9 +90,11 @@ const getCategoryColor = (category: string) => {
                   {/* <h2 className="text-xl sm:text-2xl lg:text-2xl text-gray-200 mb-6 font-medium">
                     {program?.description}
                   </h2> */}
-                  {/* <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                    {slide.description}
-                  </p> */}
+                  <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                    {/* {slide.description} */}
+                    Empowering Girls Through STEM Education
+
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <Button
                       size="lg"
@@ -106,7 +108,7 @@ const getCategoryColor = (category: string) => {
                     <Button
                       variant="outline"
                       size="lg"
-                      className="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-4 text-lg font-bold transition-all duration-300"
+                      className="border-2 border-white text-red-700 hover:bg-white hover:text-red-700 px-8 py-4 text-lg font-bold transition-all duration-300"
                       asChild
                     >
                       <Link href="/join-us">
@@ -206,9 +208,9 @@ const getCategoryColor = (category: string) => {
                     <Button className="w-full" asChild>
                       <Link href="/sheroes-application">Apply Now</Link>
                     </Button>
-                    <Button variant="outline" className="w-full" asChild>
+                    {/* <Button variant="outline" className="w-full" asChild>
                       <Link href="/sheroes-portal">Participant Portal</Link>
-                    </Button>
+                    </Button> */}
                     <Button variant="outline" className="w-full" asChild>
                       <Link href="/join-us">Get Involved</Link>
                     </Button>

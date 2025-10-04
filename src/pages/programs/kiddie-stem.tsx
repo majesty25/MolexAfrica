@@ -86,7 +86,7 @@ export default function KiddieStemPrograms() {
                   <h1 className="text-2xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
                     {program?.title}
                   </h1>
-                  <h2 className="text-xl sm:text-2xl lg:text-2xl text-gray-200 mb-6 font-medium">
+                  <h2 className="text-xl sm:text-xl lg:text-xl text-gray-200 mb-6 font-medium">
                     Igniting curiosity and innovation in children through hands-on STEM learning experiences that build foundational skills for the future.
                   </h2>
                   {/* <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -102,7 +102,7 @@ export default function KiddieStemPrograms() {
                         Apply Now
                       </Link>
                     </Button>
-                    <Button
+                    {/* <Button
                       variant="outline"
                       size="lg"
                       className="border-2 border-white text-blue-900 hover:bg-blue-900 hover:text-white px-8 py-4 text-lg font-bold transition-all duration-300"
@@ -111,7 +111,7 @@ export default function KiddieStemPrograms() {
                       <Link href="/kiddie-stem-portal">
                         Parent Portal
                       </Link>
-                    </Button>
+                    </Button> */}
                   </div>
                 </div>
               </div>
@@ -129,14 +129,14 @@ export default function KiddieStemPrograms() {
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Program Overview</h2>
               <div className="prose prose-md dark:prose-invert max-w-none">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                <p className="text-gray-600 text-md dark:text-gray-300 leading-relaxed mb-6">
                   {program?.description}
                 </p>
 
                 <h3 className="text-md font-bold text-gray-900 dark:text-white mb-4">Program Objectives</h3>
                 <ul className="space-y-2 text-gray-600 dark:text-gray-300 mb-6">
                   {program?.objectives.map((objective, index) => (
-                    <li key={index} className="flex items-start">
+                    <li key={index} className="flex text-md items-start">
                       <CheckCircle className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" />
                       {objective}
                     </li>

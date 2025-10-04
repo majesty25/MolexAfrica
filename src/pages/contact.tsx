@@ -179,6 +179,56 @@ export default function Contact() {
                   Send Message
                 </Button>
               </form>
+
+                {/* Social Media & Newsletter */}
+              <Card className="shadow-lg">
+                <CardContent className="p-8">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Stay Connected</h3>
+                  
+                  {/* Social Media Links */}
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
+                    <div className="flex space-x-4">
+                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
+                        <Facebook className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-400 hover:bg-blue-500 text-white rounded-lg">
+                        <Twitter className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-pink-600 hover:bg-pink-700 text-white rounded-lg">
+                        <Instagram className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg">
+                        <Linkedin className="h-5 w-5" />
+                      </Button>
+                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-lg">
+                        <Youtube className="h-5 w-5" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Newsletter Signup */}
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Newsletter</h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      Subscribe to get updates about our programs and impact stories.
+                    </p>
+                    <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email"
+                        value={newsletterEmail}
+                        onChange={(e) => setNewsletterEmail(e.target.value)}
+                        className="flex-1"
+                        required
+                      />
+                      <Button type="submit">
+                        Subscribe
+                      </Button>
+                    </form>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             {/* Contact Information & Map */}
@@ -244,55 +294,7 @@ export default function Contact() {
                 </CardContent>
               </Card>
 
-              {/* Social Media & Newsletter */}
-              <Card className="shadow-lg">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">Stay Connected</h3>
-                  
-                  {/* Social Media Links */}
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
-                    <div className="flex space-x-4">
-                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-600 hover:bg-blue-700 text-white rounded-lg">
-                        <Facebook className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-400 hover:bg-blue-500 text-white rounded-lg">
-                        <Twitter className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-pink-600 hover:bg-pink-700 text-white rounded-lg">
-                        <Instagram className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-blue-700 hover:bg-blue-800 text-white rounded-lg">
-                        <Linkedin className="h-5 w-5" />
-                      </Button>
-                      <Button variant="ghost" size="icon" className="w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-lg">
-                        <Youtube className="h-5 w-5" />
-                      </Button>
-                    </div>
-                  </div>
-
-                  {/* Newsletter Signup */}
-                  <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Newsletter</h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                      Subscribe to get updates about our programs and impact stories.
-                    </p>
-                    <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                      <Input
-                        type="email"
-                        placeholder="Enter your email"
-                        value={newsletterEmail}
-                        onChange={(e) => setNewsletterEmail(e.target.value)}
-                        className="flex-1"
-                        required
-                      />
-                      <Button type="submit">
-                        Subscribe
-                      </Button>
-                    </form>
-                  </div>
-                </CardContent>
-              </Card>
+            
 
               {/* Embedded Map Placeholder */}
               <Card className="shadow-lg">

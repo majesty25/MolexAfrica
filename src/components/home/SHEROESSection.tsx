@@ -21,7 +21,7 @@ export function SHEROESSection() {
               <span className="block text-primary mt-2">Inspiring the Next Generation</span>
             </h2>
 
-            <div className="space-y-4 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+            <div className="space-y-4 text-md text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
                 Our SHEROES in STEM initiative has been proudly featured on the front page of 'The Chronicle'. This recognition highlights the significant strides we are making in empowering young African girls to overcome barriers and achieve excellence in STEM fields. By showcasing the stories of these resilient and talented girls, we aim to inspire a new generation to pursue careers in science, technology, engineering, and mathematics. This milestone is a testament to the hard work, dedication, and passion driving this initiative forward.
               </p>

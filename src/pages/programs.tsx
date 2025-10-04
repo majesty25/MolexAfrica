@@ -23,7 +23,10 @@ export default function Programs() {
     { value: "all", label: "All Programs" },
     { value: "education", label: "Education" },
     { value: "healthcare", label: "Healthcare" },
-    { value: "development", label: "Development" }
+    { value: "development", label: "Development" },
+    { value: "STEM", label: "STEM" },
+    { value: "STEM for Girls", label: "STEM for Girls" },
+
   ];
 
   const filteredPrograms = activeFilter === "all" 

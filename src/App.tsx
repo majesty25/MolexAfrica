@@ -65,18 +65,18 @@ function Router() {
             <Route path="/programs/sheroes/cohort1" component={SheroesCohort1} />
             <Route path="/programs/sheroes/cohort2" component={SheroesCohort2} />
             <Route path="/programs/sheroes/ff" component={EducationPrograms} />
-            <Route path="/programs/healthcare" component={HealthcarePrograms} />
+            {/* <Route path="/programs/healthcare" component={HealthcarePrograms} /> */}
             <Route path="/programs/kiddie-stem" component={KiddieStemPrograms} />
-            <Route path="/programs/robotics-ai-clubs-shs" component={RoboticsAIClubsSHS} />
+            {/* <Route path="/programs/robotics-ai-clubs-shs" component={RoboticsAIClubsSHS} /> */}
             <Route path="/programs/sheroes" component={SheroesInStem} />
             {/* <Route path="/programs/:id" component={DevelopmentPrograms} /> */}
-            <Route path="/programs/:id" component={ProgramDetail} />
-            <Route path="/events" component={Events} />
-            <Route path="/events/:id" component={EventDetail} />
+            {/* <Route path="/programs/:id" component={ProgramDetail} /> */}
+            {/* <Route path="/events" component={Events} />
+            <Route path="/events/:id" component={EventDetail} /> */}
             <Route path="/executives" component={Executives} />
             <Route path="/board" component={Board} />
-            <Route path="/advisory-council" component={AdvisoryCouncil} />
-            <Route path="/organogram" component={Organogram} />
+            {/* <Route path="/advisory-council" component={AdvisoryCouncil} /> */}
+            {/* <Route path="/organogram" component={Organogram} /> */}
             <Route path="/gallery" component={Gallery} />
             <Route path="/news" component={News} />
             <Route path="/news/:id" component={NewsDetail} />

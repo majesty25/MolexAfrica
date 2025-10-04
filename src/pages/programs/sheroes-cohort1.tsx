@@ -412,8 +412,8 @@ export default function SheroesCohort1() {
               const images = [
                 "https://i0.wp.com/yoursmartclass.com/wp-content/uploads/2024/11/LEARNING-PROCESS.jpg?fit=820%2C460&ssl=1",
                 "https://racheldebarros.com/wp-content/uploads/2022/09/learn-arduino-intro-featured.jpg",
-                "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-                "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                "https://img-c.udemycdn.com/course/750x422/3721148_417f_2.jpg",
+                "https://img.electronicdesign.com/files/base/ebm/electronicdesign/image/2023/06/Breadboard_dreamstime_m_43541137.648b4f4ca5973.png?auto=format,compress&fit=crop&q=45&h=356&height=356&w=640&width=640"
               ];
               return (
                 <Card key={c.title} className="overflow-hidden">
@@ -444,10 +444,10 @@ export default function SheroesCohort1() {
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((p, index) => {
               const projectImages = [
-                "https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-                "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-                "https://images.unsplash.com/photo-1581092335878-4d5c51b7e4c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-                "https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
+                "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-38.jpg?alt=media&token=d9ec383d-56cb-4c8f-a316-d2422e67a6e1",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-16.jpg?alt=media&token=ee9a68c6-d4a4-4da1-81b7-a37d384a3828",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-19.jpg?alt=media&token=0e405835-f16f-4b4d-8af5-1880f6421963",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21.jpg?alt=media&token=5057f237-8a7c-42cd-96d9-e80e0058a5e8",
               ];
               return (
                 <Card key={p.title} className="overflow-hidden">
@@ -494,7 +494,7 @@ export default function SheroesCohort1() {
       </section>
 
       {/* Inspirational Sessions */}
-      <section className="py-12 bg-white dark:bg-gray-800">
+      {/* <section className="py-12 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold">Inspirational Sessions</h2>
@@ -542,7 +542,7 @@ export default function SheroesCohort1() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Outcomes & Success Stories */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900">
@@ -579,17 +579,7 @@ export default function SheroesCohort1() {
         </div>
       </section>
 
-      {/* Banner Image */}
-      <section className="py-8 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-42-09.jpg?alt=media&token=f8394307-19db-4c56-b91d-b623bc28b962"
-            alt="SHEROES Success Stories"
-            className="w-full h-64 object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </section>
-   
+
 
       {/* Optional: Impact banner if your component expects props */}
       {program && (
