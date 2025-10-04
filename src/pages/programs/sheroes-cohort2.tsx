@@ -54,18 +54,18 @@ export default function SheroesCohort2() {
         keywords="SHEROES in STEM, cohort 2, girls in STEM, STEM education, gender equality, MOLEX Foundation"
       />
 
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative h-[70vh] overflow-hidden">
         <img
-          src='https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-40-21_1.jpg?alt=media&token=75a6022c-fd87-4310-8363-49e6e4bcfce3'
+          src='https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fcohort%202%2F3M3A7998.jpg?alt=media&token=2dd783e8-4502-49d1-9148-16c9c39f6b86'
           alt='SHEROES Cohort 2'
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black bg-opacity-50" />
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl mx-auto px-4">
-            <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mb-4">
+            {/* <Badge className="bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200 mb-4">
               Cohort 2 - Innovators
-            </Badge>
+            </Badge> */}
             <h1 className="text-2xl sm:text-5xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               SHEROES in STEM - Cohort 2
             </h1>
@@ -73,7 +73,7 @@ export default function SheroesCohort2() {
               The Innovators: Advancing Technology and Creativity
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button
+              {/* <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white px-8 py-4 text-lg font-bold transition-all duration-300 transform hover:scale-105"
                 asChild
@@ -81,7 +81,7 @@ export default function SheroesCohort2() {
                 <Link href="/programs/sheroes">
                   View Main Program
                 </Link>
-              </Button>
+              </Button> */}
               <Button
                 variant="outline"
                 size="lg"
@@ -159,7 +159,7 @@ export default function SheroesCohort2() {
                       <Users className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">Participants</div>
-                        <div className="text-gray-600 dark:text-gray-300">30 Girls</div>
+                        <div className="text-gray-600 dark:text-gray-300">60 Girls</div>
                       </div>
                     </div>
 
@@ -167,7 +167,7 @@ export default function SheroesCohort2() {
                       <Calendar className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">Duration</div>
-                        <div className="text-gray-600 dark:text-gray-300">12 Months</div>
+                        <div className="text-gray-600 dark:text-gray-300">1 Months</div>
                       </div>
                     </div>
 
@@ -175,7 +175,7 @@ export default function SheroesCohort2() {
                       <Building className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <div className="font-semibold text-gray-900 dark:text-white">Location</div>
-                        <div className="text-gray-600 dark:text-gray-300">Nyanfeku Ekroful, Ghana</div>
+                        <div className="text-gray-600 dark:text-gray-300">Embedded Systems Lab, Department of Physics, UCC</div>
                       </div>
                     </div>
                   </div>

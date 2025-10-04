@@ -52,19 +52,19 @@ export function ProgramImpactBanner({ program, onShare }: ProgramImpactBannerPro
           {/* Quick Impact Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">1000+</div>
+              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">60</div>
               <div className="text-white text-sm">Beneficiaries</div>
             </div>
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">85%</div>
+              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">90%</div>
               <div className="text-white text-sm">Success Rate</div>
             </div>
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">15+</div>
-              <div className="text-white text-sm">Communities</div>
+              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">16</div>
+              <div className="text-white text-sm">Regions</div>
             </div>
             <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-4">
-              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">3 Years</div>
+              <div className="text-2xl sm:text-3xl font-bold text-yellow-300 mb-1">5 Years</div>
               <div className="text-white text-sm">Running</div>
             </div>
           </div>
@@ -85,10 +85,10 @@ export function ProgramImpactBanner({ program, onShare }: ProgramImpactBannerPro
             <Button 
               variant="outline" 
               size="lg" 
-              className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-3 text-base font-bold transition-all duration-300 shadow-xl"
+              className="border-2 bg-white text-red-700 hover:bg-gray-100 px-8 py-3 text-base font-bold transition-all duration-300 shadow-xl"
               onClick={onShare}
             >
-              <Share2 className="mr-2 h-4 w-4" />
+              <Share2 className="bg-white text-red-700 hover:bg-gray-100" />
               Share Program
             </Button>
           </div>

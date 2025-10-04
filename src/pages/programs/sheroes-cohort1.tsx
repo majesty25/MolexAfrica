@@ -43,17 +43,6 @@ export default function SheroesCohort1() {
   // Get the Sheroes program data
   const program = programs.find((p) => p.id === "sheroes");
 
-  const launch = {
-    date: "April 26, 2024",
-    venue: "School of Medical Sciences Auditorium, University of Cape Coast",
-    attendees: "≈800 students",
-    goals: [
-      "Increase representation of girls in STEM education and careers",
-      "Provide a robust foundation via interactive, hands-on activities",
-      "Reduce gender disparity and foster diversity in ICT and STEM",
-    ],
-    sdgs: ["SDG 4", "SDG 5", "SDG 8", "SDG 10"],
-  };
 
   const cohort = {
     name: "Cohort 1",
@@ -254,16 +243,6 @@ export default function SheroesCohort1() {
     }
   };
 
-  const sdgBadges = useMemo(
-    () =>
-      launch.sdgs.map((g) => (
-        <Badge key={g} className="bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200">
-          {g}
-        </Badge>
-      )),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    []
-  );
 
   return (
     <>
@@ -285,15 +264,7 @@ export default function SheroesCohort1() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl mx-auto px-4">
             <div className="flex flex-wrap gap-2 justify-center mb-4">
-              <Badge className="bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200">
-                Cohort 1 · Pioneers
-              </Badge>
-              <Badge className="bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
-                {launch.date}
-              </Badge>
-              <Badge className="bg-sky-100 text-sky-800 dark:bg-sky-900 dark:text-sky-200">
-                {launch.attendees}
-              </Badge>
+              
             </div>
             <h1 className="text-2xl sm:text-5xl font-bold mb-4 leading-tight">
               SHEROES in STEM — Cohort 1
@@ -308,7 +279,7 @@ export default function SheroesCohort1() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-700 px-8 py-4 text-lg font-bold"
+                className="border-2 border-white text-red-700 px-8 py-4 text-lg font-bold"
                 asChild
               >
                 <Link href="/join-us">Join Next Cohort</Link>
@@ -322,23 +293,23 @@ export default function SheroesCohort1() {
       <section className="py-8 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            {/* <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
               Background & Launch
-            </h2>
+            </h2> */}
             <div className="prose prose-lg dark:prose-invert max-w-none">
-              <p>
+              {/* <p>
                 SHEROES in STEM launched on <strong>{launch.date}</strong> at the{" "}
                 <strong>{launch.venue}</strong>, drawing <strong>{launch.attendees}</strong>. The initiative
                 empowers girls to pursue STEM, close gender gaps, and nurture future innovators.
-              </p>
-              <ul className="list-disc list-inside">
+              </p> */}
+              {/* <ul className="list-disc list-inside">
                 {launch.goals.map((g) => (
                   <li key={g}>{g}</li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2 mt-4">{sdgBadges}</div>
+              <div className="flex flex-wrap gap-2 mt-4">{sdgBadges}</div> */}
 
-              <h3 className="text-2xl font-semibold mt-8">Cohort One Bootcamp</h3>
+              <h2 className="text-3xl font-semibold mt-8">Cohort One Bootcamp</h2>
               <p>
                 Held in <strong>{cohort.month}</strong> at <strong>{cohort.location}</strong>.
               </p>
@@ -395,16 +366,16 @@ export default function SheroesCohort1() {
                 </div>
 
                 <div className="flex flex-col gap-2 pt-2">
-                  <Button variant="outline" className="w-full" onClick={handleShare}>
+                  {/* <Button variant="outline" className="w-full" onClick={handleShare}>
                     <Share2 className="h-4 w-4 mr-2" />
                     Share Cohort Story
-                  </Button>
-                  <Button className="w-full" asChild>
+                  </Button> */}
+                  {/* <Button className="w-full" asChild>
                     <Link href="/sheroes-application">Apply Now</Link>
-                  </Button>
-                  <Button variant="outline" className="w-full" asChild>
+                  </Button> */}
+                  {/* <Button variant="outline" className="w-full" asChild>
                     <Link href="/sheroes-portal">Access Participant Portal</Link>
-                  </Button>
+                  </Button> */}
                   <Button variant="outline" className="w-full" asChild>
                     <Link href="/join-us">Apply for Next Cohort</Link>
                   </Button>
@@ -439,8 +410,8 @@ export default function SheroesCohort1() {
           <div className="grid md:grid-cols-2 gap-6">
             {coreLessons.map((c, index) => {
               const images = [
-                "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
-                "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
+                "https://i0.wp.com/yoursmartclass.com/wp-content/uploads/2024/11/LEARNING-PROCESS.jpg?fit=820%2C460&ssl=1",
+                "https://racheldebarros.com/wp-content/uploads/2022/09/learn-arduino-intro-featured.jpg",
                 "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300",
                 "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300"
               ];
@@ -573,45 +544,6 @@ export default function SheroesCohort1() {
         </div>
       </section>
 
-      {/* Banner Image */}
-      <section className="py-8 bg-gray-100 dark:bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fsheroes%2Fphoto_2024-09-23_15-41-34.jpg?alt=media&token=b763a65c-4a42-4f6c-aa59-8a7001e39b87"
-            alt="SHEROES Enrichment Activities"
-            className="w-full h-64 object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </section>
-
-      {/* Enrichment & Extras */}
-      <section className="py-12 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Enrichment & Extras</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Beyond the lab—wellbeing, community, and public engagement.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {enrichment.map((item, index) => {
-              const icons = [Sprout, Users, Award, HeartHandshake];
-              const IconComponent = icons[index % icons.length];
-              return (
-                <Card key={item} className="overflow-hidden">
-                  <div className="h-32 bg-gradient-to-r from-blue-100 to-green-100 dark:from-blue-900 dark:to-green-900 flex items-center justify-center">
-                    <IconComponent className="h-12 w-12 text-primary" />
-                  </div>
-                  <CardContent className="p-6">
-                    <p className="text-gray-700 dark:text-gray-300">{item}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Outcomes & Success Stories */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -657,35 +589,7 @@ export default function SheroesCohort1() {
           />
         </div>
       </section>
-
-      {/* Partnerships, Donations & Legacy */}
-      <section className="py-12 bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Partnerships, Donations & Legacy</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300">
-              Building a durable pipeline for girls in STEM.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {donationsAndLegacy.map((d, index) => {
-              const icons = [Award, HeartHandshake, Building, Users];
-              const IconComponent = icons[index % icons.length];
-              return (
-                <Card key={d} className="overflow-hidden">
-                  <div className="h-32 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 flex items-center justify-center">
-                    <IconComponent className="h-12 w-12 text-primary" />
-                  </div>
-                  <CardContent className="p-6">
-                    <p className="text-gray-700 dark:text-gray-300">{d}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+   
 
       {/* Optional: Impact banner if your component expects props */}
       {program && (
@@ -723,7 +627,7 @@ export default function SheroesCohort1() {
             <Button
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-red-700"
+              className="bg-white text-red-700 hover:bg-gray-100"
               asChild
             >
               <Link href="/programs/sheroes">Learn More About SHEROES</Link>
