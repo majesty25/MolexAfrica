@@ -227,7 +227,7 @@ export const programs: Program[] = [
       "Competitions and exhibitions to showcase student work",
     ],
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2F3M3A8523.jpg?alt=media&token=6ef5f82f-dca9-42da-848a-ccda84eb8394",
     icon: "Bot",
     gallery: [
       // "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
@@ -257,7 +257,7 @@ export const programs: Program[] = [
       "Community Building: Efforts will be made to create an engaged online community through comment sections, live interactions, and periodic feedback from participants and viewers.",
     ],
     image:
-      "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      "https://firebasestorage.googleapis.com/v0/b/auction-c5969.appspot.com/o/MOLEX%20FOUNDATION%2Fpinnacle%20journey%2F3M3A7926.jpg?alt=media&token=7e56550c-df27-4d76-8846-cff97b09773a",
     icon: "HandHeart",
     gallery: [
       // "https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
@@ -272,7 +272,7 @@ export const programs: Program[] = [
     id: "guiding-stars",
     title: "Guiding Stars",
     description:
-      "Strengthening community resilience to climate change by promoting education, adaptation, and sustainable practices.",
+      "The Guiding Stars Initiative, launched by the MOLEX Foundation Africa, aims to empower young individuals and students to realize their full potential and become drivers of positive change in their communities. This project focuses on addressing the challenges faced by Junior High Schools (JHS) and Senior High Schools (SHS), especially in rural and underserved areas. By providing",
     category: "development",
     objectives: [
       "Provide comprehensive training and development opportunities",
@@ -282,7 +282,7 @@ export const programs: Program[] = [
       "Measure and evaluate program effectiveness",
     ],
     image:
-      "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
+      "https://latitude-ink.onrender.com/images/molex/05.jpeg",
     icon: "Sprout",
     gallery: [
       // "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
